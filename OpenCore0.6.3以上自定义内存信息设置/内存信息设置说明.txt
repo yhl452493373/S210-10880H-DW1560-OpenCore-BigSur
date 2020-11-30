@@ -1,0 +1,20 @@
+1、作用：关于本机 - 内存 中内存槽数量错误问题
+2、前置要求：opencore 0.6.3及以上
+3、使用方法：
+	3.1、重要提示：修改内存信息时，切记不要使用opencore来编辑config.plist。如果你用opencore修改来其他信息，则需要从新把内存信息复制进去。因为opencore上修改来内存信息后没有保存（big sur中使用oc配置内存信息，实测保存后配置的信息丢失）
+	3.2、用法：在你用oc配置好其他项后保存，然后用文本编辑器（推荐vscode或者sublime，总之用有代码语法检查和代码高亮的文本编辑器，便于查错），搜索 CustomMemory ，默认情况下，这个是 false。把它改为true。复制 内存信息设置.plist 中 Memory 和下面对应的 dict 中内容到你的config.plist里面。检查你的 config.plist 中 Memory 一节结构是否和 内存信息设置.plist的结构一致，一致则保存，然后重启即可。
+4、其他说明：
+	4.1、Memory下数据说明请打开opencore，切到 PlatformInfo - 自定义内存（CustomMemory），然后按Ctrl + T，鼠标放到对应的项上查看。如果要修改，一般只需要修改FormFactor（如果你是台式机，这个值填9，笔记本填13），MaxCapacity（单位是字节，1GB = 1024 * 1024 * 1024 ）似乎没什么用，Type（DDR3 填 24，DDR4 填 26，LPDDR3 填 29，LPDDR4 填 30）
+	4.2、Devices中，每个dict里面的数据说明：
+		AssetTag 值不用填，貌似没啥用
+		BankLocator 的值对应 系统报告 - 硬件 - 内存 中内存插槽里面显示的 BANK0 BANK1 BANK2 BANK3 等，根据你未配置内存时显示的BANK填写
+		DeviceLocator 的值对应 系统报告 - 硬件 - 内存 中内存插槽里面显示的 ChannelA-DIMM0 ChannelB-DIMM0 等，根据你未配置内存时显示的Channel填写
+		Manufacturer 的值表示 生产企业 即 内存条制造商，没有强迫症就随便填写，有就进windows，用cpu-z查
+		PartNumber 的值表示 内存条部件号 即内存条型号，没强迫症就随便填写，有就进windows，用cpu-z查
+		SerialNumber 的值表示 内存条序列号，没强迫症就随便填，有就进windows，用cpu-z查
+		Size 的值表示 内存条大小，单位为MB，1GB = 1024GB，你是多少GB，就乘以多少。结果不要带单位
+		Speed 的值表示 内存条频率，单位为MHz，你是2666就填2666，2400就填2400
+
+如果是我同款机型（S200，8850H），并且你的内存条没有（一般笔记本内存都没有）带纠错（ecc或crc），你只需要把 Manufacturer PartNumber SerialNumber Size Speed改成你对应的即可，其他的根据自己机型设置
+
+修改前先备份你原来的config.plist，便于出错是恢复

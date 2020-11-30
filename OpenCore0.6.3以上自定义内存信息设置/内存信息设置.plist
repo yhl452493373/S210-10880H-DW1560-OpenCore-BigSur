@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PlatformInfo</key>
+	<dict>
+		<key>CustomMemory</key>
+		<true/>
+		<key>Memory</key>
+		<dict>
+			<key>DataWidth</key>
+			<integer>64</integer>
+			<key>ErrorCorrection</key>
+			<integer>3</integer>
+			<key>FormFactor</key>
+			<integer>13</integer>
+			<key>MaxCapacity</key>
+			<integer>34359738368</integer>
+			<key>TotalWidth</key>
+			<integer>64</integer>
+			<key>Type</key>
+			<integer>26</integer>
+			<key>TypeDetail</key>
+			<integer>128</integer>
+			<key>Devices</key>
+			<array>
+				<dict>
+					<key>AssetTag</key>
+					<string></string>
+					<key>BankLocator</key>
+					<string>BANK 0</string>
+					<key>DeviceLocator</key>
+					<string>ChannelA-DIMM0</string>
+					<key>Manufacturer</key>
+					<string>Team Group Inc.</string>
+					<key>PartNumber</key>
+					<string>TEAMGROUP-SD4-2666</string>
+					<key>SerialNumber</key>
+					<string>0104B8A4</string>
+					<key>Size</key>
+					<integer>16384</integer>
+					<key>Speed</key>
+					<integer>2666</integer>
+				</dict>
+				<dict>
+					<key>AssetTag</key>
+					<string></string>
+					<key>BankLocator</key>
+					<string>BANK 2</string>
+					<key>DeviceLocator</key>
+					<string>ChannelB-DIMM0</string>
+					<key>Manufacturer</key>
+					<string>Team Group Inc.</string>
+					<key>PartNumber</key>
+					<string>TEAMGROUP-SD4-2666</string>
+					<key>SerialNumber</key>
+					<string>0104AC0C</string>
+					<key>Size</key>
+					<integer>16384</integer>
+					<key>Speed</key>
+					<integer>2666</integer>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+</dict>
+</plist>
