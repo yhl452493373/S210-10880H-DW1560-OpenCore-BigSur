@@ -41,3 +41,9 @@ Boot - CSM Configuration - CSM Support [ Disable ]
 启动时，如果出现苹果logo被压扁，尝试换一个显示器。我自己的XV273K暗影骑士，接HDMI口，启动一阶段就是扁的，进系统后正常。我的便携显示器，接的mini dp，启动过程logo都正常
 如果你觉得 关于本机 - 内存 那里显示的4根内存插槽不符合小主机的内存槽数量，可以参考 OpenCore0.6.3以上自定义内存信息设置 修改config.plist，此修改后，再使用OpenCore Configurator编辑并保存config.plist后，内存设置需要重新设置，否则会丢失（不影响使用）
 
+6、特殊情况说明
+声卡为alc 282机型，win下必须装reltek声卡驱动
+部分机型可能出现声卡名称和id不匹配，例如在linux下提取的codec，名称为alc 233，但是id是0x10ec0235，则以235为声卡id，即声卡是alc 235
+alc 282目前在本机型最接近的id为86，或者使用voodoohda
+alc 233（声卡id0x10ec0235即实际alc 235）id为11，按需取用
+
