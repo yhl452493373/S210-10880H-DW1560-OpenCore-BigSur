@@ -1,4 +1,4 @@
-# S210-10880H-DW1560-OpenCore-BigSur
+# S210-10880H/10980HK-DW1560-OpenCore-BigSur
  
 i9 10880H/i9 10980HK(早期机型)
 
