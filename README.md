@@ -1,30 +1,9 @@
-<<<<<<< Updated upstream
-# S210-10880H/10980HK-DW1560-OpenCore-BigSur
- 
-i9 10880H/i9 10980HK(早期机型)
+# S210-10980HK(10880H)-DW1560-OpenCore-BigSur
 
-32g ddr4
-
-alc282
-
-dp1.4+hdmi2.0
-
-dw1560
-=======
-# S210-10980HK-DW1560-OpenCore-BigSur
->>>>>>> Stashed changes
-
-### 正常工作：
-
-dp、hdmi、电源管理、睡眠唤醒、蓝牙、wifi、随航、接力、隔空投送
-
-### 不正常：
-
-声卡，麦克风有声音，但是耳机没输出。可以采用外接USB声卡或者type-c耳机或者蓝牙耳机，或者更换为VoodooHDA驱动
 基于opencore0.6.6
  
 ### 1、我的配置
-机型S210，i9 10980kh，32G，4K显示器（mini dp）+4K显示（hdmi 2.0），声卡为alc235（老板说是alc 233，但声卡id0x10ec0235即实际alc 235）
+机型S210，i9 10980hk，32G，4K显示器（mini dp）+4K显示（hdmi 2.0），声卡为alc235（老板说是alc 233，但声卡id0x10ec0235即实际alc 235）
 
 ### 2、工作情况
 以下均基于BigSur 11.2测试，Catalina没测试。如果要使用Catalina，建议用最新的10.15.7进行测试
@@ -66,4 +45,3 @@ c、Kernel - VoodooHDA.kext 启用
 
 ### 7、可以在windows中安装macos支持文件（启动转换助理的“操作”菜单中可以下载，进windows后，安装），实现类似白苹果的windows下选择启动系统功能。注意，安装后需要在c:\program files\apple software update下将bootcamp升级，否则bootcamp会错误识别所有mac磁盘都可作为macos启动
 
-## 经过测试，支持S210 10980HK（声卡alc233，但id为10ec0235的，需要改声卡id为7.如果需要显示器音频，则需要外接两台显示器，否则显示器音频无法识别）
