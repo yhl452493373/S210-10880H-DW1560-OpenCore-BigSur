@@ -210,69 +210,29 @@
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>BwCbPg==</data>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,2,0</string>
 				<key>device-id</key>
 				<data>mz4AAA==</data>
-				<key>device_type</key>
-				<string>VGA compatible controller</string>
 				<key>enable-hdmi-dividers-fix</key>
 				<data>AQAAAA==</data>
 				<key>enable-hdmi20</key>
 				<data>AQAAAA==</data>
 				<key>enable-lspcon-support</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-con0-busid</key>
-				<data>AgAAAA==</data>
+				<key>framebuffer-con0-alldata</key>
+				<data>AQISAAAEAADHAwAA</data>
 				<key>framebuffer-con0-enable</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-con0-flags</key>
-				<data>xwMAAA==</data>
 				<key>framebuffer-con0-has-lspcon</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-con0-index</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con0-pipe</key>
-				<data>EgAAAA==</data>
 				<key>framebuffer-con0-preferred-lspcon-mode</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-con0-type</key>
-				<data>AAgAAA==</data>
-				<key>framebuffer-con1-busid</key>
-				<data>BgAAAA==</data>
+				<key>framebuffer-con1-alldata</key>
+				<data>AgYSAAAEAADHAwAA</data>
 				<key>framebuffer-con1-enable</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-con1-flags</key>
-				<data>xwMAAA==</data>
-				<key>framebuffer-con1-index</key>
-				<data>AgAAAA==</data>
-				<key>framebuffer-con1-pipe</key>
-				<data>EgAAAA==</data>
-				<key>framebuffer-con1-type</key>
-				<data>AAQAAA==</data>
-				<key>framebuffer-con2-busid</key>
-				<data>AAAAAA==</data>
+				<key>framebuffer-con2-alldata</key>
+				<data>AwAIAAAEAADHAwAA</data>
 				<key>framebuffer-con2-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con2-flags</key>
-				<data>IAAAAA==</data>
-				<key>framebuffer-con2-index</key>
-				<data>/////w==</data>
-				<key>framebuffer-con2-pipe</key>
-				<data>AAAAAA==</data>
-				<key>framebuffer-con2-type</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con3-busid</key>
-				<data>AAAAAA==</data>
-				<key>framebuffer-con3-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con3-flags</key>
-				<data>IAAAAA==</data>
-				<key>framebuffer-con3-index</key>
-				<data>/////w==</data>
-				<key>framebuffer-con3-pipe</key>
-				<data>AAAAAA==</data>
-				<key>framebuffer-con3-type</key>
 				<data>AQAAAA==</data>
 				<key>framebuffer-fbmem</key>
 				<data>AAAAAw==</data>
@@ -333,24 +293,6 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
-				<string>VoodooHDA.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<false/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/VoodooHDA</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
 				<string>AppleALC.kext</string>
 				<key>Comment</key>
 				<string></string>
@@ -376,6 +318,24 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/WhateverGreen</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>VoodooHDA.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<false/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/VoodooHDA</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -635,6 +595,8 @@
 			<false/>
 			<key>PowerTimeoutKernelPanic</key>
 			<false/>
+			<key>SetApfsTrimTimeout</key>
+			<integer>999</integer>
 			<key>ThirdPartyDrives</key>
 			<false/>
 			<key>XhciPortLimit</key>
@@ -662,6 +624,10 @@
 			<string>None</string>
 			<key>HideAuxiliary</key>
 			<true/>
+			<key>LauncherOption</key>
+			<string>Disabled</string>
+			<key>LauncherPath</key>
+			<string>Default</string>
 			<key>PickerAttributes</key>
 			<integer>0</integer>
 			<key>PickerAudioAssist</key>
@@ -669,7 +635,7 @@
 			<key>PickerMode</key>
 			<string>External</string>
 			<key>PickerVariant</key>
-			<string>Auto</string>
+			<string>Modern</string>
 			<key>PollAppleHotKeys</key>
 			<true/>
 			<key>ShowPicker</key>
@@ -712,8 +678,6 @@
 			<false/>
 			<key>BlacklistAppleUpdate</key>
 			<false/>
-			<key>BootProtect</key>
-			<string>Bootstrap</string>
 			<key>DmgLoading</key>
 			<string>Signed</string>
 			<key>EnablePassword</key>
@@ -806,10 +770,10 @@
 			<dict>
 				<key>#csr-active-config</key>
 				<data>dwgAAA==</data>
-				<key>boot-args</key>
-				<string>-v brcmfx-country=HK</string>
 				<key>prev-lang:kbd</key>
 				<string>zh-Hans:252</string>
+				<key>boot-args</key>
+				<string>-v brcmfx-country=HK -igfxcdc</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -868,7 +832,86 @@
 		<key>Automatic</key>
 		<true/>
 		<key>CustomMemory</key>
-		<false/>
+		<true/>
+		<key>Generic</key>
+		<dict>
+			<key>AdviseWindows</key>
+			<false/>
+			<key>MaxBIOSVersion</key>
+			<false/>
+			<key>MLB</key>
+			<string>C07826609QXKXPG1H</string>
+			<key>ProcessorType</key>
+			<integer>0</integer>
+			<key>ROM</key>
+			<data>ML8BEjAR</data>
+			<key>SpoofVendor</key>
+			<false/>
+			<key>SystemMemoryStatus</key>
+			<string>Auto</string>
+			<key>SystemProductName</key>
+			<string>Macmini8,1</string>
+			<key>SystemSerialNumber</key>
+			<string>C07WX0V8JYVX</string>
+			<key>SystemUUID</key>
+			<string>3E2D3EF1-C0C6-49EE-A962-2A3429FD4C9D</string>
+		</dict>
+		<key>Memory</key>
+		<dict>
+			<key>DataWidth</key>
+			<integer>64</integer>
+			<key>Devices</key>
+			<array>
+				<dict>
+					<key>AssetTag</key>
+					<string></string>
+					<key>BankLocator</key>
+					<string>BANK 0</string>
+					<key>DeviceLocator</key>
+					<string>ChannelA-DIMM0</string>
+					<key>Manufacturer</key>
+					<string>Team Group Inc.</string>
+					<key>PartNumber</key>
+					<string>TEAMGROUP-SD4-2666</string>
+					<key>SerialNumber</key>
+					<string>0104B8A4</string>
+					<key>Size</key>
+					<integer>16384</integer>
+					<key>Speed</key>
+					<integer>2666</integer>
+				</dict>
+				<dict>
+					<key>AssetTag</key>
+					<string></string>
+					<key>BankLocator</key>
+					<string>BANK 2</string>
+					<key>DeviceLocator</key>
+					<string>ChannelB-DIMM0</string>
+					<key>Manufacturer</key>
+					<string>Team Group Inc.</string>
+					<key>PartNumber</key>
+					<string>TEAMGROUP-SD4-2666</string>
+					<key>SerialNumber</key>
+					<string>0104AC0C</string>
+					<key>Size</key>
+					<integer>16384</integer>
+					<key>Speed</key>
+					<integer>2666</integer>
+				</dict>
+			</array>
+			<key>ErrorCorrection</key>
+			<integer>3</integer>
+			<key>FormFactor</key>
+			<integer>13</integer>
+			<key>MaxCapacity</key>
+			<integer>68719476736</integer>
+			<key>TotalWidth</key>
+			<integer>64</integer>
+			<key>Type</key>
+			<integer>26</integer>
+			<key>TypeDetail</key>
+			<integer>128</integer>
+		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
 		<key>UpdateNVRAM</key>
@@ -877,6 +920,8 @@
 		<true/>
 		<key>UpdateSMBIOSMode</key>
 		<string>Create</string>
+		<key>UseRawUuidEncoding</key>
+		<false/>
 	</dict>
 	<key>UEFI</key>
 	<dict>
@@ -918,19 +963,20 @@
 		<true/>
 		<key>Drivers</key>
 		<array>
+			<string>ExFatDxe.efi</string>
+			<string>OpenHfsPlus.efi</string>
 			<string>OpenCanopy.efi</string>
 			<string>OpenRuntime.efi</string>
-			<string>HfsPlus.efi</string>
-			<string>ExFatDxe.efi</string>
+			<string>#OpenPartitionDxe.efi</string>
 			<string>#AudioDxe.efi</string>
 			<string>#OpenUsbKbDxe.efi</string>
-			<string>#UsbMouseDxe.efi</string>
 			<string>#Ps2KeyboardDxe.efi</string>
 			<string>#Ps2MouseDxe.efi</string>
+			<string>#UsbMouseDxe.efi</string>
 			<string>#HiiDatabase.efi</string>
 			<string>#NvmExpressDxe.efi</string>
+			<string>#HfsPlus.efi</string>
 			<string>#XhciDxe.efi</string>
-			<string>#PartitionDxe.efi</string>
 			<string>#CrScreenshotDxe.efi</string>
 		</array>
 		<key>Input</key>
@@ -950,7 +996,7 @@
 			<key>PointerSupport</key>
 			<false/>
 			<key>PointerSupportMode</key>
-			<string>ASUS</string>
+			<string></string>
 			<key>TimerResolution</key>
 			<integer>50000</integer>
 		</dict>
@@ -1022,6 +1068,8 @@
 		</dict>
 		<key>Quirks</key>
 		<dict>
+			<key>DisableSecurityPolicy</key>
+			<false/>
 			<key>ExitBootServicesDelay</key>
 			<integer>0</integer>
 			<key>IgnoreInvalidFlexRatio</key>

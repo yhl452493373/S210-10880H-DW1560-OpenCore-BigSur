@@ -1,8 +1,8 @@
 1、我的配置
-机型S210，i9 10880h，32G，4K显示器（mini dp），声卡为alc282
+机型S210，i9 10980kh，32G，4K显示器（mini dp）+4K显示（hdmi 2.0），声卡为alc235（老板说是alc 233，但声卡id0x10ec0235即实际alc 235）
 
 2、工作情况
-以下均基于BigSur 11.0.1测试，Catalina没测试。如果要使用Catalina，建议用最新的10.15.7进行测试
+以下均基于BigSur 11.2测试，Catalina没测试。如果要使用Catalina，建议用最新的10.15.7进行测试
 
 ①、全部正常：
 DP、HDMI2.0（单DP、单HDMI、DP+HDMI）
@@ -16,34 +16,28 @@ USB（3.0、2.0、type-c）
 随航、接力、隔空投送
 
 ②、部分正常：
-耳麦接口中，麦克风输入正常，HDMI、DP输出声音正常，但是耳麦接口的耳机无声
+耳机、麦克风正常，但是HDMI音频需要外接两台显示器才有，原因未知
 
-3、不正常部分解决方案
-目前影响使用的只有耳机无声，针对这个，有以下几种方案：
+3、BIOS设置
+Boot - CSM Configuration - CSM Support [ Disable ]
 
-①、选择蓝牙耳机替代
+4、其他问题
+系统偏好设置 - 节能 中的电池项设置不能保存，这个直接忽略，毕竟本来就没电池
+系统偏好设置 - 节能 中的电能小憩需要取消选中，否则长时间睡眠后可能崩溃
+启动时，如果出现苹果logo被压扁，尝试换一个显示器。我自己的XV273K暗影骑士，接HDMI口，启动一阶段就是扁的，进系统后正常。我的便携显示器，接的mini dp，启动过程logo都正常
+如果你觉得 关于本机 - 内存 那里显示的4根内存插槽不符合小主机的内存槽数量，可以参考 OpenCore0.6.3以上自定义内存信息设置
+多台显示器情况下，进recovery后要不了多久会花屏，只接一台显示器进recovery即可
 
-②、选择type-c接口耳机替代（我测试的小米的type-c降噪耳机正常）
-
-③、选择USB声卡（根据你的耳麦情况选择耳麦合一还是分离的），之后将你的耳机接上去（注意要选择免驱的）
-
-④、选择VoodooHDA代替AppleALC，使用此方案需要在config.plist配置文件中做以下改动：
+5、特殊情况说明
+S210,10880H机型，声卡为alc 282，win下必须装reltek声卡驱动
+alc 282目前在接近的id为86，或者使用voodoohda
+选择VoodooHDA代替AppleALC，使用此方案需要在config.plist配置文件中做以下改动：
 a、DeviceProperties - PciRoot(0x0)/Pci(0x1F,0x3) 删除
 b、Kernel - AppleALC.kext 禁用或删除（如果是删除，建议把对应的kext也删掉）
 c、Kernel - VoodooHDA.kext 启用
 此法存在缺陷：多个带喇叭的显示器下，只有一个显示器能发声，且睡眠唤醒后，所有显示器都不发声，但是耳麦接口都正常
 
-4、BIOS设置
-Boot - CSM Configuration - CSM Support [ Disable ]
+6、opencore0.6.6开始，删除了bootstrap.efi，因此你更新此efi后，可能会变成只能进入到windows的情况，请用easyuefi修改opencore启动项，将其指向efi磁盘下/boot/bootx64.efi，然后把其启动顺序调整到最上面，重启即可
 
-5、其他问题
-系统偏好设置 - 节能 中的电池项设置不能保存，这个直接忽略，毕竟本来就没电池
-启动时，如果出现苹果logo被压扁，尝试换一个显示器。我自己的XV273K暗影骑士，接HDMI口，启动一阶段就是扁的，进系统后正常。我的便携显示器，接的mini dp，启动过程logo都正常
-如果你觉得 关于本机 - 内存 那里显示的4根内存插槽不符合小主机的内存槽数量，可以参考 OpenCore0.6.3以上自定义内存信息设置 修改config.plist，此修改后，再使用OpenCore Configurator编辑并保存config.plist后，内存设置需要重新设置，否则会丢失（不影响使用）
-
-6、特殊情况说明
-声卡为alc 282机型，win下必须装reltek声卡驱动
-部分机型可能出现声卡名称和id不匹配，例如在linux下提取的codec，名称为alc 233，但是id是0x10ec0235，则以235为声卡id，即声卡是alc 235
-alc 282目前在本机型最接近的id为86，或者使用voodoohda
-alc 233（声卡id0x10ec0235即实际alc 235）id为11，按需取用
+7、可以在windows中安装macos支持文件（启动转换助理的“操作”菜单中可以下载，进windows后，安装），实现类似白苹果的windows下选择启动系统功能。注意，安装后需要在c:\program files\apple software update下将bootcamp升级
 
