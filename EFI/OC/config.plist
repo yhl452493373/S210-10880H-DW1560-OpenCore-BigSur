@@ -848,9 +848,9 @@
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>MLB</key>
-			<string>C078372004NKXPGJA</string>
+			<string>C07837100QXKXPGUE</string>
 			<key>ProcessorType</key>
-			<integer>0</integer>
+			<integer>1801</integer>
 			<key>ROM</key>
 			<data>ML8BEjAR</data>
 			<key>SpoofVendor</key>
@@ -860,9 +860,9 @@
 			<key>SystemProductName</key>
 			<string>Macmini8,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C07XDMZJJYVX</string>
+			<string>C07XD0M6JYVX</string>
 			<key>SystemUUID</key>
-			<string>F9DF8838-F6D6-4630-B981-34EE992F6007</string>
+			<string>9F12C695-A4FE-4C15-8013-E52BAEF1F97B</string>
 		</dict>
 		<key>Memory</key>
 		<dict>
@@ -962,6 +962,8 @@
 			<integer>20</integer>
 			<key>PlayChime</key>
 			<string>Auto</string>
+			<key>ResetTrafficClass</key>
+			<false/>
 			<key>SetupDelay</key>
 			<integer>0</integer>
 			<key>VolumeAmplifier</key>
@@ -993,8 +995,6 @@
 			<false/>
 			<key>KeyForgetThreshold</key>
 			<integer>5</integer>
-			<key>KeyMergeThreshold</key>
-			<integer>2</integer>
 			<key>KeySupport</key>
 			<true/>
 			<key>KeySupportMode</key>
@@ -1017,6 +1017,8 @@
 			<key>DirectGopRendering</key>
 			<false/>
 			<key>ForceResolution</key>
+			<false/>
+			<key>GopPassThrough</key>
 			<false/>
 			<key>IgnoreTextInGraphics</key>
 			<false/>
@@ -1076,6 +1078,8 @@
 		</dict>
 		<key>Quirks</key>
 		<dict>
+			<key>ActivateHpetSupport</key>
+			<false/>
 			<key>DisableSecurityPolicy</key>
 			<false/>
 			<key>ExitBootServicesDelay</key>
