@@ -28,7 +28,7 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-EC-USBX.aml</string>
+				<string>SSDT-PLUG.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -36,43 +36,18 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-PLUG.aml</string>
+				<string>SSDT-USBX.aml</string>
 			</dict>
 		</array>
 		<key>Delete</key>
-		<array>
-			<dict>
-				<key>All</key>
-				<false/>
-				<key>Comment</key>
-				<string>Delete CpuPm</string>
-				<key>Enabled</key>
-				<false/>
-				<key>OemTableId</key>
-				<data>Q3B1UG0AAAA=</data>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data>U1NEVA==</data>
-			</dict>
-			<dict>
-				<key>All</key>
-				<false/>
-				<key>Comment</key>
-				<string>Delete Cpu0Ist</string>
-				<key>Enabled</key>
-				<false/>
-				<key>OemTableId</key>
-				<data>Q3B1MElzdAA=</data>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data>U1NEVA==</data>
-			</dict>
-		</array>
+		<array/>
 		<key>Patch</key>
 		<array>
 			<dict>
+				<key>Base</key>
+				<string></string>
+				<key>BaseSkip</key>
+				<integer>0</integer>
 				<key>Comment</key>
 				<string>Rename HDAS to HDEF (Audio)</string>
 				<key>Count</key>
@@ -99,6 +74,10 @@
 				<data>RFNEVA==</data>
 			</dict>
 			<dict>
+				<key>Base</key>
+				<string></string>
+				<key>BaseSkip</key>
+				<integer>0</integer>
 				<key>Comment</key>
 				<string>Rename HECI to IMEI (PAVP)</string>
 				<key>Count</key>
@@ -125,6 +104,10 @@
 				<data>RFNEVA==</data>
 			</dict>
 			<dict>
+				<key>Base</key>
+				<string></string>
+				<key>BaseSkip</key>
+				<integer>0</integer>
 				<key>Comment</key>
 				<string>Rename H_EC to EC (USB Power)</string>
 				<key>Count</key>
@@ -189,6 +172,8 @@
 			<true/>
 			<key>EnableWriteUnprotector</key>
 			<true/>
+			<key>ForceBooterSignature</key>
+			<false/>
 			<key>ForceExitBootServices</key>
 			<false/>
 			<key>ProtectMemoryRegions</key>
@@ -319,6 +304,24 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
+				<string>WhateverGreen.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/WhateverGreen</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
 				<string>AppleALC.kext</string>
 				<key>Comment</key>
 				<string></string>
@@ -337,13 +340,13 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
-				<string>WhateverGreen.kext</string>
+				<string>VoodooHDA.kext</string>
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/WhateverGreen</string>
+				<string>Contents/MacOS/VoodooHDA</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -535,6 +538,24 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
+				<string>NVMeFix.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/NVMeFix</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
 				<string>USBPorts.kext</string>
 				<key>Comment</key>
 				<string></string>
@@ -604,7 +625,7 @@
 			<key>PowerTimeoutKernelPanic</key>
 			<false/>
 			<key>SetApfsTrimTimeout</key>
-			<integer>999</integer>
+			<integer>-1</integer>
 			<key>ThirdPartyDrives</key>
 			<false/>
 			<key>XhciPortLimit</key>
@@ -840,7 +861,7 @@
 		<key>Automatic</key>
 		<true/>
 		<key>CustomMemory</key>
-		<true/>
+		<false/>
 		<key>Generic</key>
 		<dict>
 			<key>AdviseWindows</key>
@@ -848,9 +869,9 @@
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>MLB</key>
-			<string>C07837100QXKXPGUE</string>
+			<string>C07216700GUF1HC8C</string>
 			<key>ProcessorType</key>
-			<integer>1801</integer>
+			<integer>0</integer>
 			<key>ROM</key>
 			<data>ML8BEjAR</data>
 			<key>SpoofVendor</key>
@@ -858,67 +879,11 @@
 			<key>SystemMemoryStatus</key>
 			<string>Auto</string>
 			<key>SystemProductName</key>
-			<string>Macmini8,1</string>
+			<string>Macmini6,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C07XD0M6JYVX</string>
+			<string>C07HL2Z4DY3H</string>
 			<key>SystemUUID</key>
-			<string>9F12C695-A4FE-4C15-8013-E52BAEF1F97B</string>
-		</dict>
-		<key>Memory</key>
-		<dict>
-			<key>DataWidth</key>
-			<integer>64</integer>
-			<key>Devices</key>
-			<array>
-				<dict>
-					<key>AssetTag</key>
-					<string></string>
-					<key>BankLocator</key>
-					<string>BANK 0</string>
-					<key>DeviceLocator</key>
-					<string>ChannelA-DIMM0</string>
-					<key>Manufacturer</key>
-					<string>Team Group Inc.</string>
-					<key>PartNumber</key>
-					<string>TEAMGROUP-SD4-2666</string>
-					<key>SerialNumber</key>
-					<string>0104B8A4</string>
-					<key>Size</key>
-					<integer>16384</integer>
-					<key>Speed</key>
-					<integer>2666</integer>
-				</dict>
-				<dict>
-					<key>AssetTag</key>
-					<string></string>
-					<key>BankLocator</key>
-					<string>BANK 2</string>
-					<key>DeviceLocator</key>
-					<string>ChannelB-DIMM0</string>
-					<key>Manufacturer</key>
-					<string>Team Group Inc.</string>
-					<key>PartNumber</key>
-					<string>TEAMGROUP-SD4-2666</string>
-					<key>SerialNumber</key>
-					<string>0104AC0C</string>
-					<key>Size</key>
-					<integer>16384</integer>
-					<key>Speed</key>
-					<integer>2666</integer>
-				</dict>
-			</array>
-			<key>ErrorCorrection</key>
-			<integer>3</integer>
-			<key>FormFactor</key>
-			<integer>13</integer>
-			<key>MaxCapacity</key>
-			<integer>68719476736</integer>
-			<key>TotalWidth</key>
-			<integer>64</integer>
-			<key>Type</key>
-			<integer>26</integer>
-			<key>TypeDetail</key>
-			<integer>128</integer>
+			<string>25416A2E-30DA-43AB-9DB7-1C87A86E9152</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -929,7 +894,7 @@
 		<key>UpdateSMBIOSMode</key>
 		<string>Create</string>
 		<key>UseRawUuidEncoding</key>
-		<false/>
+		<true/>
 	</dict>
 	<key>UEFI</key>
 	<dict>
@@ -948,6 +913,21 @@
 			<key>MinVersion</key>
 			<integer>0</integer>
 		</dict>
+		<key>AppleInput</key>
+		<dict>
+			<key>AppleEvent</key>
+			<string>OEM</string>
+			<key>CustomDelays</key>
+			<string>Auto</string>
+			<key>KeyInitialDelay</key>
+			<integer>0</integer>
+			<key>KeySubsequentDelay</key>
+			<integer>5</integer>
+			<key>PointerSpeedDiv</key>
+			<integer>1</integer>
+			<key>PointerSpeedMul</key>
+			<integer>1</integer>
+		</dict>
 		<key>Audio</key>
 		<dict>
 			<key>AudioCodec</key>
@@ -963,7 +943,7 @@
 			<key>PlayChime</key>
 			<string>Auto</string>
 			<key>ResetTrafficClass</key>
-			<false/>
+			<true/>
 			<key>SetupDelay</key>
 			<integer>0</integer>
 			<key>VolumeAmplifier</key>
@@ -977,17 +957,6 @@
 			<string>OpenHfsPlus.efi</string>
 			<string>OpenCanopy.efi</string>
 			<string>OpenRuntime.efi</string>
-			<string>#OpenPartitionDxe.efi</string>
-			<string>#AudioDxe.efi</string>
-			<string>#OpenUsbKbDxe.efi</string>
-			<string>#Ps2KeyboardDxe.efi</string>
-			<string>#Ps2MouseDxe.efi</string>
-			<string>#UsbMouseDxe.efi</string>
-			<string>#HiiDatabase.efi</string>
-			<string>#NvmExpressDxe.efi</string>
-			<string>#HfsPlus.efi</string>
-			<string>#XhciDxe.efi</string>
-			<string>#CrScreenshotDxe.efi</string>
 		</array>
 		<key>Input</key>
 		<dict>
@@ -1004,7 +973,7 @@
 			<key>PointerSupport</key>
 			<false/>
 			<key>PointerSupportMode</key>
-			<string></string>
+			<string>ASUS</string>
 			<key>TimerResolution</key>
 			<integer>50000</integer>
 		</dict>
@@ -1044,8 +1013,6 @@
 			<key>AppleBootPolicy</key>
 			<false/>
 			<key>AppleDebugLog</key>
-			<false/>
-			<key>AppleEvent</key>
 			<false/>
 			<key>AppleFramebufferInfo</key>
 			<false/>
