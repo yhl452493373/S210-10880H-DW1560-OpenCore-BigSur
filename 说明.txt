@@ -4,7 +4,7 @@
 机型S210，i9 10980kh，64G，4K显示器（mini dp）+4K显示（hdmi 2.0），声卡为alc235（老板说是alc 233，但声卡id0x10ec0235即实际alc 235）
 
 2、工作情况
-以下均基于BigSur 11.3测试，Catalina没测试。如果要使用Catalina，建议用最新的10.15.7进行测试
+以下均基于BigSur 11.4测试，Catalina没测试。如果要使用Catalina，建议用最新的10.15.7进行测试
 
 ①、全部正常：
 DP、HDMI2.0（单DP、单HDMI、DP+HDMI）
