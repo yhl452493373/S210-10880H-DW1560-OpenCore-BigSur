@@ -146,6 +146,8 @@
 			<false/>
 			<key>ResetLogoStatus</key>
 			<false/>
+			<key>SyncTableIds</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>Booter</key>
@@ -221,6 +223,10 @@
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>BwCbPg==</data>
+				<key>AAPL00,override-no-connect</key>
+				<data>AP///////wBKizsqAQEBASQdAQOAAAB4Pu6Ro1RMmSYPUFQhCADRwNHo0fyVAJBAgYCBQIHAQNAAoPBwPoAwIDUAWMMQAAAaVl4AoKCgKVAwIDUAWMMQAAAaAAAA/ABXQ1MgRGlzcGxheQogAAAA/QAYkA/ePAAKICAgICAgAWA=</data>
+				<key>AAPL01,override-no-connect</key>
+				<data>AP///////wBKizK8AQEBASwcAQS1AAB4Pu6Ro1RMmSYPUFS/74DRwNHo0fyVAJBAgYCBQIHAQNAAoPBwPoAwIDUAVE8hAAAaAAAA/ABXQ1NEUTQKICAgICAgAAAA/wBkZW1vc2V0LTEKIDAgAAAA/QAYkA/ePAAKICAgICAgAZg=</data>
 				<key>device-id</key>
 				<data>mz4AAA==</data>
 				<key>enable-hdmi-dividers-fix</key>
@@ -347,6 +353,24 @@
 				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VoodooHDA</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>HibernationFixup.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/HibernationFixup</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -635,6 +659,8 @@
 		</dict>
 		<key>Scheme</key>
 		<dict>
+			<key>CustomKernel</key>
+			<false/>
 			<key>FuzzyMatch</key>
 			<false/>
 			<key>KernelArch</key>
@@ -830,7 +856,7 @@
 				<key>prev-lang:kbd</key>
 				<string>zh-Hans:252</string>
 				<key>boot-args</key>
-				<string>brcmfx-country=HK</string>
+				<string>-v brcmfx-country=HK</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -897,9 +923,9 @@
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>MLB</key>
-			<string>C07850600CDKXPGUE</string>
+			<string>C07753403GUKXPGJA</string>
 			<key>ProcessorType</key>
-			<integer>1801</integer>
+			<integer>0</integer>
 			<key>ROM</key>
 			<data>ML8BEjAR</data>
 			<key>SpoofVendor</key>
@@ -909,9 +935,9 @@
 			<key>SystemProductName</key>
 			<string>Macmini8,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C07XT09LJYVX</string>
+			<string>C07W1DZQJYVX</string>
 			<key>SystemUUID</key>
-			<string>75058E4C-B5BD-4316-B4D8-1EA1FECABE13</string>
+			<string>65B03B42-43C2-454C-B48E-F3D042CE206E</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
