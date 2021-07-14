@@ -4,6 +4,7 @@
 
 基于opencore0.7.1
 
++ 2021.07.14 重新定制USBMap.kext;修复单显示器下DP音频或HDMI音频未识别的问题
 + 2021.07.06 更新oc到0.7.1，更新kext到最新
 + 2021.06.09 更新oc到0.7.0，更新kext到最新
 + 2021.05.06 更新oc到0.6.9，更新kext到最新
@@ -29,9 +30,7 @@ I219V（背面靠近双USB3.0的那个）
 I211AT（背面靠近电源接口的那个）
 USB（3.0、2.0、type-c）
 随航、接力、隔空投送
-
-②、部分正常：
-耳机、麦克风正常，但是HDMI音频需要外接两台显示器才有，原因未知
+耳机、麦克风、DP/HDMI音频
 
 ### 3、BIOS设置
 Boot - CSM Configuration - CSM Support [ Disable ]
@@ -45,12 +44,8 @@ Boot - CSM Configuration - CSM Support [ Disable ]
 
 ### 5、特殊情况说明
 S210,10880H机型，声卡为alc 282，win下必须装reltek声卡驱动
-alc 282目前最接近的id为86，声卡有声音，麦克风无声；或者使用voodoohda
-选择VoodooHDA代替AppleALC，使用此方案需要在config.plist配置文件中做以下改动：
-a、DeviceProperties - PciRoot(0x0)/Pci(0x1F,0x3) 删除
-b、Kernel - AppleALC.kext 禁用或删除（如果是删除，建议把对应的kext也删掉）
-c、Kernel - VoodooHDA.kext 启用
-此法存在缺陷：多个带喇叭的显示器下，只有一个显示器能发声，且睡眠唤醒后，所有显示器都不发声，但是耳麦接口都正常
+alc 282目前最接近的id为86，声卡有声音，麦克风无声；
+或者选择VoodooHDA代替AppleALC；此法存在缺陷：多个带喇叭的显示器下，只有一个显示器能发声，且睡眠唤醒后，所有显示器都不发声，但是耳麦接口都正常
 
 ### 6、opencore0.6.6开始，删除了bootstrap.efi，因此你更新此efi后，可能会变成只能进入到windows的情况，请用easyuefi修改opencore启动项，将其指向efi磁盘下/boot/bootx64.efi，然后把其启动顺序调整到最上面，重启即可
 
