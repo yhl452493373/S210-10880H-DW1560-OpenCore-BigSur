@@ -223,10 +223,6 @@
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>BwCbPg==</data>
-				<key>AAPL00,override-no-connect</key>
-				<data>AP///////wBKizsqAQEBASQdAQOAAAB4Pu6Ro1RMmSYPUFQhCADRwNHo0fyVAJBAgYCBQIHAQNAAoPBwPoAwIDUAWMMQAAAaVl4AoKCgKVAwIDUAWMMQAAAaAAAA/ABXQ1MgRGlzcGxheQogAAAA/QAYkA/ePAAKICAgICAgAWA=</data>
-				<key>AAPL01,override-no-connect</key>
-				<data>AP///////wBKizK8AQEBASwcAQS1AAB4Pu6Ro1RMmSYPUFS/74DRwNHo0fyVAJBAgYCBQIHAQNAAoPBwPoAwIDUAVE8hAAAaAAAA/ABXQ1NEUTQKICAgICAgAAAA/wBkZW1vc2V0LTEKIDAgAAAA/QAYkA/ePAAKICAgICAgAZg=</data>
 				<key>device-id</key>
 				<data>mz4AAA==</data>
 				<key>enable-hdmi-dividers-fix</key>
