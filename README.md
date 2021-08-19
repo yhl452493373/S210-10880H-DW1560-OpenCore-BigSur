@@ -2,8 +2,9 @@
 
 ## 目前来说，已经基本没啥可完善的地方了，因此以后的更新都是常规更新，即OpenCore和Kext更新
 
-基于opencore0.7.1
+基于opencore0.7.2
 
++ 2021.08.19 支持Monterey Beta版，可以正常安装使用，但部分软件和Monterey存在兼容性问题。
 + 2021.08.03 更新oc到0.7.2，更新kext到最新，支持macOS12的AirPlay to Mac（未测试）
 + 2021.08.02 增加HoRNDIS驱动，可以通过安卓的USB共享网络上网
 + 2021.07.23 修复重启问题
@@ -21,7 +22,7 @@
 机型S210，i9 10980hk，64G，4K显示器（mini dp）+4K显示（hdmi 2.0），声卡为alc235（老板说是alc 233，但声卡id0x10ec0235即实际alc 235）
 
 ### 2、工作情况
-以下均基于BigSur 11.4测试，Catalina没测试。如果要使用Catalina，建议用最新的10.15.7进行测试
+以下均基于BigSur 11.4测试，Catalina没测试。如果要使用Catalina，建议用最新的10.15.7进行测试。（2021.08.19测试，Monterey可以正常安装使用。）
 
 ①、全部正常：
 DP、HDMI2.0（单DP、单HDMI、DP+HDMI）
