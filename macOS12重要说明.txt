@@ -2,3 +2,4 @@
 2、macOS Monterey似乎存在将NTFS识别为外置磁盘的BUG，会将其显示在桌面。此BUG在安装了NTFS读写软件并重启后即可解决。附带的ntfsmac_montereypreview.dmg是预览版，有效期为10月10日。到期后自行购买正版或者卸载找寻其他替代方案。
 3、使用Beta版的macOS Monterey，部分软件存在兼容性问题，部分软件可以上www.macwk.com上查看。没有的则需要自行测试，小白不建议升级到Beta的macOS Monterey
 4、若你的BIOS中存在TPM，需要将其关闭，安装或更新了macOS Monterey后再打开。和“1”一样，目前建议直接关闭
+5、这个EFI中的无线网卡驱动仅测试于DW1560，若你是其他白果拆机网卡，请将其对应的kext驱动替换，但是BlueToolFixup.kext不要变动；若是intel的网卡，请自行爬bbs.pcbeta.com解决
