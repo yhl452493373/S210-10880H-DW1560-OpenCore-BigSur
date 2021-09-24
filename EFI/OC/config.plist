@@ -608,7 +608,7 @@
                     <key>Base</key>
                     <string></string>
                     <key>Comment</key>
-                    <string>解决DP/HDMI音频识别</string>
+                    <string>Patch for DP or HDMI audio detecting when using single display</string>
                     <key>Count</key>
                     <integer>0</integer>
                     <key>Enabled</key>
@@ -711,7 +711,7 @@
                 <key>PickerMode</key>
                 <string>External</string>
                 <key>PickerVariant</key>
-                <string>Default</string>
+                <string>Auto</string>
                 <key>PollAppleHotKeys</key>
                 <true/>
                 <key>ShowPicker</key>
@@ -771,7 +771,7 @@
                 <key>ScanPolicy</key>
                 <integer>33496835</integer>
                 <key>SecureBootModel</key>
-                <string>x86legacy</string>
+                <string>j174</string>
                 <key>Vault</key>
                 <string>Optional</string>
             </dict>
@@ -940,13 +940,13 @@
                 <key>AdviseFeatures</key>
                 <false/>
                 <key>MLB</key>
-                <string>C07006104QXKXPGFB</string>
+                <string>C07834101QXKXPGA8</string>
                 <key>MaxBIOSVersion</key>
                 <false/>
                 <key>ProcessorType</key>
                 <integer>0</integer>
                 <key>ROM</key>
-                <data>u2i+//dG</data>
+                <data>t0Mdxgxy</data>
                 <key>SpoofVendor</key>
                 <false/>
                 <key>SystemMemoryStatus</key>
@@ -954,9 +954,9 @@
                 <key>SystemProductName</key>
                 <string>Macmini8,1</string>
                 <key>SystemSerialNumber</key>
-                <string>C07C7EZNJYVX</string>
+                <string>C07X8MYWJYVX</string>
                 <key>SystemUUID</key>
-                <string>0FED9B09-66A4-4FB7-91A7-C85BC000FB68</string>
+                <string>DF6D9DD4-2795-44AB-9009-F27D451CD8A2</string>
             </dict>
             <key>UpdateDataHub</key>
             <true/>
@@ -1031,6 +1031,8 @@
                 <dict>
                     <key>Arguments</key>
                     <string></string>
+                    <key>Comment</key>
+                    <string></string>
                     <key>Enabled</key>
                     <true/>
                     <key>Path</key>
@@ -1039,6 +1041,8 @@
                 <dict>
                     <key>Arguments</key>
                     <string></string>
+                    <key>Comment</key>
+                    <string></string>
                     <key>Enabled</key>
                     <true/>
                     <key>Path</key>
@@ -1046,6 +1050,8 @@
                 </dict>
                 <dict>
                     <key>Arguments</key>
+                    <string></string>
+                    <key>Comment</key>
                     <string></string>
                     <key>Enabled</key>
                     <true/>
@@ -1095,7 +1101,7 @@
                 <key>Resolution</key>
                 <string>Max</string>
                 <key>SanitiseClearScreen</key>
-                <true/>
+                <false/>
                 <key>TextRenderer</key>
                 <string>BuiltinGraphics</string>
                 <key>UgaPassThrough</key>
