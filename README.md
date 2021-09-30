@@ -4,6 +4,7 @@
 
 基于opencore0.7.4开发版
 
++ 2021.09.30 改变PciRoot(0x0)/Pci(0x2,0x0)的AAPL,ig-platform-id为0900A53E ，同时重新定制显卡补丁，以解决Monterey Beta8下DP无输出问题（Beta7以及以下版本未测试）
 + 2021.09.24 更新oc到0.7.4开发版，据说解决了beta6升级到beta7时一直重启的问题，需要用OCC最新版并切换到开发版来编辑（也可以用OCAT最新版）
 + 2021.09.07 更新oc到0.7.3，更新kext到最新，支持macOS12的AirPlay to Mac (已测试）)
 + 2021.08.19 支持Monterey Beta版，可以正常安装使用，但部分软件和Monterey存在兼容性问题。

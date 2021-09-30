@@ -214,21 +214,33 @@
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
-				<data>CQClPg==</data>
+				<data>BwCbPg==</data>
+				<key>AAPL00,override-no-connect</key>
+				<data>AP///////wBKizsqAQEBASQdAQOAAAB4Pu6Ro1RMmSYPUFQhCADRwNHo0fyVAJBAgYCBQIHAQNAAoPBwPoAwIDUAWMMQAAAaVl4AoKCgKVAwIDUAWMMQAAAaAAAA/ABXQ1MgRGlzcGxheQogAAAA/QAYkA/ePAAKICAgICAgAWA=</data>
+				<key>AAPL01,override-no-connect</key>
+				<data>AP///////wBKizK8AQEBASwcAQS1AAB4Pu6Ro1RMmSYPUFS/74DRwNHo0fyVAJBAgYCBQIHAQNAAoPBwPoAwIDUAVE8hAAAaAAAA/ABXQ1NEUTQKICAgICAgAAAA/wBkZW1vc2V0LTEKIDAgAAAA/QAYkA/ePAAKICAgICAgAZg=</data>
 				<key>device-id</key>
 				<data>mz4AAA==</data>
+				<key>enable-hdmi-dividers-fix</key>
+				<data>AQAAAA==</data>
+				<key>enable-hdmi20</key>
+				<data>AQAAAA==</data>
 				<key>enable-lspcon-support</key>
 				<data>AQAAAA==</data>
+				<key>framebuffer-con0-alldata</key>
+				<data>AQQSAAAIAADHAwAA</data>
+				<key>framebuffer-con0-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con0-has-lspcon</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con0-preferred-lspcon-mode</key>
+				<data>AQAAAA==</data>
 				<key>framebuffer-con1-alldata</key>
-				<data>AQUSAAAEAADHAQAA</data>
+				<data>AgYSAAAEAADHAwAA</data>
 				<key>framebuffer-con1-enable</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-con1-has-lspcon</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con1-preferred-lspcon-mode</key>
-				<data>AQAAAA==</data>
 				<key>framebuffer-con2-alldata</key>
-				<data>AgQSAAAEAADHAQAA</data>
+				<data>AwAIAAAEAADHAwAA</data>
 				<key>framebuffer-con2-enable</key>
 				<data>AQAAAA==</data>
 				<key>framebuffer-fbmem</key>
@@ -239,6 +251,8 @@
 				<data>AAAAAw==</data>
 				<key>framebuffer-unifiedmem</key>
 				<data>AAAAwA==</data>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -950,7 +964,7 @@
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>MLB</key>
-			<string>C07823104GUKXPGJC</string>
+			<string>C07810101J9KXPG1M</string>
 			<key>ProcessorType</key>
 			<integer>1801</integer>
 			<key>ROM</key>
@@ -962,9 +976,9 @@
 			<key>SystemProductName</key>
 			<string>Macmini8,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C07WT0TMJYVX</string>
+			<string>C07WD0XTJYVX</string>
 			<key>SystemUUID</key>
-			<string>59EA6DEE-782D-4BAB-9091-0C1DB41A0077</string>
+			<string>A4840267-E1D4-4394-8E0E-C510A9ECEEC7</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
