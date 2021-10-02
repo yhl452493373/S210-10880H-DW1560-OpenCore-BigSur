@@ -41,36 +41,6 @@
 				<key>BaseSkip</key>
 				<integer>0</integer>
 				<key>Comment</key>
-				<string>Rename HDAS to HDEF (Audio)</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>SERBUw==</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>OemTableId</key>
-				<data></data>
-				<key>Replace</key>
-				<data>SERFRg==</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data>RFNEVA==</data>
-			</dict>
-			<dict>
-				<key>Base</key>
-				<string></string>
-				<key>BaseSkip</key>
-				<integer>0</integer>
-				<key>Comment</key>
 				<string>Rename HECI to IMEI (PAVP)</string>
 				<key>Count</key>
 				<integer>0</integer>
@@ -86,36 +56,6 @@
 				<data></data>
 				<key>Replace</key>
 				<data>SU1FSQ==</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data>RFNEVA==</data>
-			</dict>
-			<dict>
-				<key>Base</key>
-				<string></string>
-				<key>BaseSkip</key>
-				<integer>0</integer>
-				<key>Comment</key>
-				<string>Rename H_EC to EC (USB Power)</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>SF9FQw==</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>OemTableId</key>
-				<data></data>
-				<key>Replace</key>
-				<data>RUNfXw==</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -215,20 +155,16 @@
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>CQClPg==</data>
-				<key>device-id</key>
-				<data>mz4AAA==</data>
 				<key>enable-lspcon-support</key>
 				<data>AQAAAA==</data>
 				<key>framebuffer-con1-alldata</key>
-				<data>AQUSAAAEAADHAQAA</data>
+				<data>AQQSAAAEAADHAQAA</data>
 				<key>framebuffer-con1-enable</key>
 				<data>AQAAAA==</data>
 				<key>framebuffer-con1-has-lspcon</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-con1-preferred-lspcon-mode</key>
-				<data>AQAAAA==</data>
 				<key>framebuffer-con2-alldata</key>
-				<data>AgQSAAAEAADHAQAA</data>
+				<data>AgYSAAAEAADHAQAA</data>
 				<key>framebuffer-con2-enable</key>
 				<data>AQAAAA==</data>
 				<key>framebuffer-fbmem</key>
@@ -950,7 +886,7 @@
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>MLB</key>
-			<string>C07823104GUKXPGJC</string>
+			<string>C07845600QXKXPGJA</string>
 			<key>ProcessorType</key>
 			<integer>1801</integer>
 			<key>ROM</key>
@@ -962,9 +898,9 @@
 			<key>SystemProductName</key>
 			<string>Macmini8,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C07WT0TMJYVX</string>
+			<string>C07XNQZQJYVX</string>
 			<key>SystemUUID</key>
-			<string>59EA6DEE-782D-4BAB-9091-0C1DB41A0077</string>
+			<string>5AE93F16-C4F7-43B5-84B0-01DCC37072F4</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
