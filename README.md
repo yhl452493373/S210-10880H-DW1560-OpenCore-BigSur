@@ -2,16 +2,17 @@
 
 ## 目前来说，已经基本没啥可完善的地方了，因此以后的更新都是常规更新，即OpenCore和Kext更新
 
-## 2021-10-02起的重要说明：
-### 从2021-09-30后开始，为兼容macOS Monterey Beta8，CPU部分，平台ID进行了更改，导致DP到DP的输出会卡在启动后的最后一个阶段，必须拔插一次显示器。因此建议使用DP到HDMI的转换线。
+## 2021-10-07起的重要说明：
+### 从2021-09-30后开始，为兼容macOS Monterey Beta8，CPU部分，平台ID进行了更改，导致Beta8版本时，DP到DP的输出会卡在启动后的最后一个阶段，必须拔插一次显示器。因此建议使用DP到HDMI的转换线。
 ### 注意，转换线必须是主动式的，内置芯片那种，注意，芯片目前个人测试正常兼容的仅为PS176，其他未测试。
 ### 目前我测试时，内置的芯片为PS176“也仁 主动式DP转HDMI2.0母转换器”（金属接头）和“开博尔 DP转HDMI”（金属接头，紫色线）都兼容
 ### 但是内置芯片为IT6563的“绿联 DP转HDMI转换器 4K60Hz”就不行。因此，选择主动式DP转HDMI线或者转换器时，一定注意选择PS176芯片的
 
-### 2021.10.02开始，“config-Monterey Beta7 and Below.plist”在Monterey Beta7及以前的版本中，DP和HDMI都工作正常。"config.plist"在所有版本中，HDMI都工作正常；单显示器时，直接DP到DP线连接显示器卡住不动时需要拔一下DP线，否则无法进入系统；单显示器时，DP转HDMI母转换器+HDMI到HDMI线连接显示器或者DP转HDMI线连接显示器也工作正常（需要内置芯片的主动式转换器或转换线，目前个人测试兼容的转换芯片为PS176）；多显示器时，HDMI和DP同时接显示器正常使用，HDMI和DP转HDMI连接显示器也正常使用；
+### 2021.10.07开始，“config-exclude Monterey Beta8.plist”在Monterey Beta8以外的版本中，DP和HDMI都工作正常。"config.plist"在所有版本中，HDMI都工作正常；单显示器时，Monterey Beta8直接DP到DP线连接显示器卡住不动时需要拔一下DP线，否则无法进入系统；单显示器时，DP转HDMI母转换器+HDMI到HDMI线连接显示器或者DP转HDMI线连接显示器也工作正常（需要内置芯片的主动式转换器或转换线，目前个人测试兼容的转换芯片为PS176）；多显示器时，HDMI和DP同时接显示器正常使用，HDMI和DP转HDMI连接显示器也正常使用；Monterey Beta9中，单DP正常
 
 基于opencore0.7.4开发版
 
++ 2021.10.07 增加-revsbvmm参数，在任意SecureBootModel下都能检测到更新；关闭SecureBootModel
 + 2021.10.02 变更部分配置
 + 2021.09.30 改变PciRoot(0x0)/Pci(0x2,0x0)的AAPL,ig-platform-id为0900A53E ，同时重新定制显卡补丁，以解决Monterey Beta8下DP无输出问题（Beta7以及以下版本未测试）
 + 2021.09.24 更新oc到0.7.4开发版，据说解决了beta6升级到beta7时一直重启的问题，需要用OCC最新版并切换到开发版来编辑（也可以用OCAT最新版）

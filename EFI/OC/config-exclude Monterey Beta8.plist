@@ -154,17 +154,21 @@
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
-				<data>CQClPg==</data>
+				<data>BwCbPg==</data>
 				<key>enable-lspcon-support</key>
 				<data>AQAAAA==</data>
+				<key>framebuffer-con0-alldata</key>
+				<data>AQQSAAAEAADHAwAA</data>
+				<key>framebuffer-con0-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con0-has-lspcon</key>
+				<data>AQAAAA==</data>
 				<key>framebuffer-con1-alldata</key>
-				<data>AQQSAAAEAADHAQAA</data>
+				<data>AgYSAAAEAADHAwAA</data>
 				<key>framebuffer-con1-enable</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-con1-has-lspcon</key>
-				<data>AQAAAA==</data>
 				<key>framebuffer-con2-alldata</key>
-				<data>AgYSAAAEAADHAQAA</data>
+				<data>/wAIAAABAAAgAAAA</data>
 				<key>framebuffer-con2-enable</key>
 				<data>AQAAAA==</data>
 				<key>framebuffer-fbmem</key>
@@ -886,11 +890,11 @@
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>MLB</key>
-			<string>C07002207QXKXPGUE</string>
+			<string>C07801303CDKXPGJC</string>
 			<key>ProcessorType</key>
-			<integer>0</integer>
+			<integer>1801</integer>
 			<key>ROM</key>
-			<data>S4eqoaU0</data>
+			<data>ML8BIBEX</data>
 			<key>SpoofVendor</key>
 			<false/>
 			<key>SystemMemoryStatus</key>
@@ -898,9 +902,9 @@
 			<key>SystemProductName</key>
 			<string>Macmini8,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C07C3ZZ1JYVX</string>
+			<string>C07W208VJYVX</string>
 			<key>SystemUUID</key>
-			<string>B85EB837-7AD6-4922-8733-D91FF1144359</string>
+			<string>FB1AD6BA-1DFE-479B-A47D-8DB1272CE6BE</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
