@@ -10,6 +10,12 @@
 
 ### 2021.10.07开始，“config-exclude Monterey Beta8.plist”在Monterey Beta8以外的版本中，DP和HDMI都工作正常。"config.plist"在所有版本中，HDMI都工作正常；单显示器时，Monterey Beta8直接DP到DP线连接显示器卡住不动时需要拔一下DP线，否则无法进入系统；单显示器时，DP转HDMI母转换器+HDMI到HDMI线连接显示器或者DP转HDMI线连接显示器也工作正常（需要内置芯片的主动式转换器或转换线，目前个人测试兼容的转换芯片为PS176）；多显示器时，HDMI和DP同时接显示器正常使用，HDMI和DP转HDMI连接显示器也正常使用；Monterey Beta9中，单DP正常
 
+#### 若无法检测到Beta版本的更新，尝试在终端输入以下命令
+```bash
+sudo /System/Library/PrivateFrameworks/Seeding.framework/Versions/A/Resources/seedutil enroll DeveloperSeed
+sudo /System/Library/PrivateFrameworks/Seeding.framework/Versions/A/Resources/seedutil fixup
+```
+
 基于opencore0.7.4开发版
 
 + 2021.10.07 增加-revsbvmm参数，在任意SecureBootModel下都能检测到更新；关闭SecureBootModel
