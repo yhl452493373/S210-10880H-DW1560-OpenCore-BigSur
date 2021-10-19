@@ -1,0 +1,6 @@
+1、macOS12从Beta6开始一直到RC版本，若config.plist->misc->SecureBootModel设为Disabled，都没法直接检测到更新，必须将其设为你自己的机型(我的EFI机型为macmini8,1，这里默设置为j174)，然后重启才会刷出更新
+2、刷出更新后，进行下载时，需要用OCC或者OCAT等编辑器，将config.plist->misc->的SecureBootModel设为Disabled，然后等待更新下载完并安装后自动重启
+3、当更新完成后，SecureBootModel可以重新打开。但是在步骤2的时候，一定要设为Disabled，否则可能导致安装失败。当然，若无重要数据，你也可以试试全程打开，看看能否顺利安装。
+4、若进行了步骤1，还是刷不出更新，可以试试终端中执行以下命令后，再看看有无更新：
+sudo /System/Library/PrivateFrameworks/Seeding.framework/Versions/A/Resources/seedutil enroll DeveloperSeed
+sudo /System/Library/PrivateFrameworks/Seeding.framework/Versions/A/Resources/seedutil fixup
