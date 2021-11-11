@@ -18,6 +18,7 @@ sudo /System/Library/PrivateFrameworks/Seeding.framework/Versions/A/Resources/se
 
 基于opencore0.7.4开发版
 
++ 2021.11.10 更新oc到0.7.5，更新kext到最新
 + 2021.10.07 增加-revsbvmm参数，在任意SecureBootModel下都能检测到更新；关闭SecureBootModel
 + 2021.10.02 变更部分配置
 + 2021.09.30 改变PciRoot(0x0)/Pci(0x2,0x0)的AAPL,ig-platform-id为0900A53E ，同时重新定制显卡补丁，以解决Monterey Beta8下DP无输出问题（Beta7以及以下版本未测试）
