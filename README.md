@@ -3,7 +3,7 @@
 ## 目前来说，已经基本没啥可完善的地方了，因此以后的更新都是常规更新，即OpenCore和Kext更新
 
 ## 2021-10-07起的重要说明：
-### 从2021-09-30后开始，为兼容macOS Monterey Beta8，CPU部分，平台ID进行了更改，导致Beta8版本时，DP到DP的输出会卡在启动后的最后一个阶段，必须拔插一次显示器。因此建议使用DP到HDMI的转换线。
+### 从2021-09-30后开始，为兼容macOS Monterey Beta8，CPU部分，平台ID进行了更改，导致Beta8版本时，DP到DP的输出会卡在启动后的最后一个阶段，必须拔插一次显示器。因此建议使用DP到HDMI的转换线。Beta9以后，DP到DP输出正常
 ### 注意，转换线必须是主动式的，内置芯片那种，注意，芯片目前个人测试正常兼容的仅为PS176，其他未测试。
 ### 目前我测试时，内置的芯片为PS176“也仁 主动式DP转HDMI2.0母转换器”（金属接头）和“开博尔 DP转HDMI”（金属接头，紫色线）都兼容
 ### 但是内置芯片为IT6563的“绿联 DP转HDMI转换器 4K60Hz”就不行。因此，选择主动式DP转HDMI线或者转换器时，一定注意选择PS176芯片的
@@ -16,7 +16,7 @@ sudo /System/Library/PrivateFrameworks/Seeding.framework/Versions/A/Resources/se
 sudo /System/Library/PrivateFrameworks/Seeding.framework/Versions/A/Resources/seedutil fixup
 ```
 
-基于opencore0.7.4开发版
+基于opencore0.7.5正式版
 
 + 2021.11.10 更新oc到0.7.5，更新kext到最新
 + 2021.10.07 增加-revsbvmm参数，在任意SecureBootModel下都能检测到更新；关闭SecureBootModel
