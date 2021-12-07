@@ -16,8 +16,9 @@ sudo /System/Library/PrivateFrameworks/Seeding.framework/Versions/A/Resources/se
 sudo /System/Library/PrivateFrameworks/Seeding.framework/Versions/A/Resources/seedutil fixup
 ```
 
-基于opencore0.7.5正式版
+基于opencore0.7.6正式版
 
++ 2021.12.07 更新oc到0.7.6，更新kext到最新
 + 2021.11.10 更新oc到0.7.5，更新kext到最新
 + 2021.10.07 增加-revsbvmm参数，在任意SecureBootModel下都能检测到更新；关闭SecureBootModel
 + 2021.10.02 变更部分配置
