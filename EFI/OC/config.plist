@@ -940,7 +940,7 @@
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>MLB</key>
-			<string>C07803700GUKXPGJC</string>
+			<string>C07832701CDKXPG1M</string>
 			<key>ProcessorType</key>
 			<integer>1801</integer>
 			<key>ROM</key>
@@ -952,9 +952,9 @@
 			<key>SystemProductName</key>
 			<string>Macmini8,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C07W40YWJYVX</string>
+			<string>C07X68ZFJYVX</string>
 			<key>SystemUUID</key>
-			<string>E70DB91E-7710-4CA4-B4BE-50A4A5AEA905</string>
+			<string>911B0ABE-7DB4-4484-A182-6A23EFADB0A0</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -996,6 +996,12 @@
 			<integer>0</integer>
 			<key>KeySubsequentDelay</key>
 			<integer>5</integer>
+			<key>PointerPollMask</key>
+			<integer>-1</integer>
+			<key>PointerPollMin</key>
+			<integer>0</integer>
+			<key>PointerPollMax</key>
+			<integer>0</integer>
 			<key>PointerSpeedDiv</key>
 			<integer>1</integer>
 			<key>PointerSpeedMul</key>
@@ -1013,15 +1019,17 @@
 			<false/>
 			<key>DisconnectHda</key>
 			<false/>
-			<key>MinimumVolume</key>
-			<integer>20</integer>
+			<key>MaximumGain</key>
+			<integer>-15</integer>
+			<key>MinimumAssistGain</key>
+			<integer>-30</integer>
+			<key>MinimumAudibleGain</key>
+			<integer>-128</integer>
 			<key>PlayChime</key>
 			<string>Auto</string>
 			<key>ResetTrafficClass</key>
 			<true/>
 			<key>SetupDelay</key>
-			<integer>0</integer>
-			<key>VolumeAmplifier</key>
 			<integer>0</integer>
 		</dict>
 		<key>ConnectDrivers</key>
