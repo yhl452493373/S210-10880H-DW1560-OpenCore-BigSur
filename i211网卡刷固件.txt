@@ -1,0 +1,27 @@
+参考资料：https://post.smzdm.com/p/a4w0p2wl/
+
+macos下操作步骤：
+1、准备一个没有重要数据的U盘（本操作会抹除U盘数据）
+2、打开终端，输入diskutil list，在结果中，通过磁盘容量，找到你的U盘为/dev/diskX,diskX为你的U盘
+3、终端输入 sudo dd if=i210.img路径 of=/dev/diskX 回车，i210.img路径为intel i21x固件目录下的i210.img的路径（如果要刷回i211，则换成i211.img的路径）
+4、重启系统，按delete键进入BIOS
+5、对BIOS进行如下设置：
+Boot - CSM Configuration
+
+CSM Support                 Enable
+
+Storage                     Do not Launch
+6、重启，进入BIOS，在BIOS的Save & Exit下，找到你的U盘（不是UEFI开头的），回车
+7、输入EEUPDATE.exe，回车
+8、重启，进入BIOS，对BIOS进行如下设置（必须按照下面顺序）
+Boot - CSM Configuration
+
+Boot option filter          UEFI only
+
+Network                     UEFI
+Storage                     UEFI
+Video                       UEFI
+Other PCI Device            UEFI
+
+CSM Support                 Disable
+9、重启，进入系统
