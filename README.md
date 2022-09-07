@@ -1,4 +1,4 @@
-# S210-10980HK(10880H)-DW1560-OpenCore-BigSur，支持Monterey、Ventura
+# S210-10980HK(10880H)-DW1830-OpenCore-Monterey，支持Monterey、Ventura
 
 ## 目前来说，已经基本没啥可完善的地方了，因此以后的更新都是常规更新，即OpenCore和Kext更新
 
@@ -11,8 +11,10 @@
 ## 2、刷固件，将i211at刷成i210，然后去掉AppleIGB和SmallTreeIntel82576这两个驱动，此法副作用未知
 
 
-基于opencore0.8.3开发版
+基于opencore0.8.4正式版
 
++ 2022.09.07 更新oc到0.8.4正式版，更新kext到正式版;重新定制USB端口
++ 2022.08.02 更新oc到0.8.3正式版，更新kext到正式版
 + 2022.07.26 解决macOS Monterey下，i211at网卡无法上网问题
 + 2022.07.11 更新oc到0.8.3开发版，更新部分kext到开发版（现在支持macOS Beta3）
 + 2022.07.07 更新oc到0.8.2正式版，更新kext到正式版（此版不支持安装macOS13 beta3）
