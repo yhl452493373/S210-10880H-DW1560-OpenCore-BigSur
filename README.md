@@ -6,13 +6,14 @@
 
 # i211AT网卡在Monterey下无法上网有两种解决方式，酌情选用：
 
-## 1、换驱动，将SmallTreeIntel82576换成[AppleIGB](https://github.com/donatengit/AppleIGB)。此方式下，可以正常上网，但是虚拟机下使用桥接网络桥接到211网卡，无法上网。如果你不使用虚拟机桥接网络，建议用这个。（config.plist中默认这样处理）
+## 1、换驱动，将SmallTreeIntel82576换成[AppleIGB](https://github.com/donatengit/AppleIGB)，最新的DEBUG版已解决虚拟机桥接网卡无法上网问题，推荐使用（刷了网卡型号后也可以直接用此驱动，不需要刷回i210）。
 
-## 2、刷固件，将i211at刷成i210，然后去掉AppleIGB和SmallTreeIntel82576这两个驱动，此法副作用未知
+## 2、刷固件，将i211at刷成i210，然后去掉AppleIGB和SmallTreeIntel82576这两个驱动，此法在macOS Ventura下会造成无限重启，且无法上网，限于macOS Monterey及以下使用
 
 
 基于opencore0.8.4正式版
 
++ 2022.09.17 更新AppleIGB驱动以修复macOS Ventura下i211网卡无法上网问题；重新定制视屏输出端口
 + 2022.09.07 更新oc到0.8.4正式版，更新kext到正式版;重新定制USB端口
 + 2022.08.02 更新oc到0.8.3正式版，更新kext到正式版
 + 2022.07.26 解决macOS Monterey下，i211at网卡无法上网问题
