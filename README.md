@@ -4,15 +4,14 @@
 
 # 2021.12.16重要说明：今天查电源日志的时候，发现每隔两小时会唤醒一次，唤醒原因似乎为【唤醒以供以网络访问】和另一个RTC任务（不确定RTC任务是否就是因为开了唤醒以供网络访问出现的），因此需要在电源管理里面把“唤醒以供以太网访问”、断电后自动启动、启用电能小憩都关掉。
 
-# i211AT网卡在Monterey下无法上网有两种解决方式，酌情选用：
+# i211AT网卡在最新的Ventura、Monterey下目前免驱，因此删除了[AppleIGB](https://github.com/donatengit/AppleIGB)驱动，同时不再需要刷成210，直接i211即可（或者可以试试用efi中提供的i211网卡固件重刷一次）。
 
-## 1、换驱动，将SmallTreeIntel82576换成[AppleIGB](https://github.com/donatengit/AppleIGB)，最新的DEBUG版已解决虚拟机桥接网卡无法上网问题，推荐使用（刷了网卡型号后也可以直接用此驱动，不需要刷回i210）。
+基于opencore0.8.7正式版
 
-## 2、刷固件，将i211at刷成i210，然后去掉AppleIGB和SmallTreeIntel82576这两个驱动，此法在macOS Ventura下会造成无限重启，且无法上网，限于macOS Monterey及以下使用
-
-
-基于opencore0.8.4正式版
-
++ 2022.12.07 更新oc到0.8.7正式版，更新kext到最新
++ 2022.11.08 更新oc到0.8.6正式版，更新kext到最新
++ 2022.10.07 去除i211的AppleIGB驱动，在最新的Monterey、Ventrua下测试，为免驱
++ 2022.10.06 更新oc到0.8.5正式版，更新kext到最新
 + 2022.09.17 更新AppleIGB驱动以修复macOS Ventura下i211网卡无法上网问题；重新定制视屏输出端口
 + 2022.09.07 更新oc到0.8.4正式版，更新kext到正式版;重新定制USB端口
 + 2022.08.02 更新oc到0.8.3正式版，更新kext到正式版
@@ -79,5 +78,5 @@ S210,10880H机型，声卡为alc 282，win下必须装reltek声卡驱动
 alc 282目前最接近的id为86，声卡有声音，麦克风无声；
 或者选择VoodooHDA代替AppleALC；此法存在缺陷：多个带喇叭的显示器下，只有一个显示器能发声，且睡眠唤醒后，所有显示器都不发声，但是耳麦接口都正常
 
-### 6、可以在windows中安装macos支持文件（启动转换助理的“操作”菜单中可以下载，进windows后，安装），实现类似白苹果的windows下选择启动系统功能。注意，安装后需要在c:\program files\apple software update下将bootcamp升级，否则bootcamp会错误识别所有mac磁盘都可作为macos启动
+### 6、可以在windows中安装macos支持文件（启动转换助理的“操作”菜单中可以下载，进windows后，安装），实现类似白苹果的windows下选择启动系统功能。注意，安装后需要在c:\program files\apple software update下将bootcamp升级，否则bootcamp会错误识别所有mac磁盘都可作为macos启动。安装后，会隐藏一些磁盘，请参照[彻底解决win10开机后，D盘或者其他隐藏，每次要重新添加盘符的方法](http://www.purplestone.cn/share/2361.html)处理
 

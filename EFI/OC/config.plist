@@ -74,38 +74,7 @@
             <key>Delete</key>
             <array/>
             <key>Patch</key>
-            <array>
-                <dict>
-                    <key>Base</key>
-                    <string></string>
-                    <key>BaseSkip</key>
-                    <integer>0</integer>
-                    <key>Comment</key>
-                    <string>change H_EC to EC</string>
-                    <key>Count</key>
-                    <integer>0</integer>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Find</key>
-                    <data>SF9FQw==</data>
-                    <key>Limit</key>
-                    <integer>0</integer>
-                    <key>Mask</key>
-                    <data></data>
-                    <key>OemTableId</key>
-                    <data></data>
-                    <key>Replace</key>
-                    <data>RUNfXw==</data>
-                    <key>ReplaceMask</key>
-                    <data></data>
-                    <key>Skip</key>
-                    <integer>0</integer>
-                    <key>TableLength</key>
-                    <integer>0</integer>
-                    <key>TableSignature</key>
-                    <data></data>
-                </dict>
-            </array>
+            <array/>
             <key>Quirks</key>
             <dict>
                 <key>FadtEnableReset</key>
@@ -179,7 +148,7 @@
                 <key>PciRoot(0x0)/Pci(0x1B,0x0)/Pci(0x0,0x0)</key>
                 <dict>
                     <key>model</key>
-                    <string>Intel I211AT PCI Express Gigabit Ethernet</string>
+                    <string>Intel I211 Gigabit Network Connection</string>
                 </dict>
                 <key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
                 <dict>
@@ -267,7 +236,7 @@
                     <key>BundlePath</key>
                     <string>WhateverGreen.kext</string>
                     <key>Comment</key>
-                    <string>V1.6.1</string>
+                    <string>V1.6.2</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -285,7 +254,7 @@
                     <key>BundlePath</key>
                     <string>AppleALC.kext</string>
                     <key>Comment</key>
-                    <string>V1.7.5</string>
+                    <string>V1.7.7</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -357,7 +326,7 @@
                     <key>BundlePath</key>
                     <string>BrcmBluetoothInjector.kext</string>
                     <key>Comment</key>
-                    <string>V2.6.3</string>
+                    <string>V2.6.4</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -375,7 +344,7 @@
                     <key>BundlePath</key>
                     <string>BlueToolFixup.kext</string>
                     <key>Comment</key>
-                    <string>V2.6.3</string>
+                    <string>V2.6.4</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -393,7 +362,7 @@
                     <key>BundlePath</key>
                     <string>BrcmFirmwareData.kext</string>
                     <key>Comment</key>
-                    <string>V2.6.3</string>
+                    <string>V2.6.4</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -411,7 +380,7 @@
                     <key>BundlePath</key>
                     <string>BrcmPatchRAM3.kext</string>
                     <key>Comment</key>
-                    <string>V2.6.3</string>
+                    <string>V2.6.4</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -429,7 +398,7 @@
                     <key>BundlePath</key>
                     <string>FeatureUnlock.kext</string>
                     <key>Comment</key>
-                    <string>V1.0.9</string>
+                    <string>V1.1.1</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -447,7 +416,7 @@
                     <key>BundlePath</key>
                     <string>RestrictEvents.kext</string>
                     <key>Comment</key>
-                    <string>V1.0.8</string>
+                    <string>V1.0.9</string>
                     <key>Enabled</key>
                     <true/>
                     <key>ExecutablePath</key>
@@ -571,33 +540,15 @@
                     <key>Arch</key>
                     <string>x86_64</string>
                     <key>BundlePath</key>
-                    <string>AppleIGB.kext</string>
-                    <key>Comment</key>
-                    <string>V5.11.4</string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>ExecutablePath</key>
-                    <string>Contents/MacOS/AppleIGB</string>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>PlistPath</key>
-                    <string>Contents/Info.plist</string>
-                </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>x86_64</string>
-                    <key>BundlePath</key>
                     <string>SmallTreeIntel82576.kext</string>
                     <key>Comment</key>
                     <string>V1.3.0</string>
                     <key>Enabled</key>
-                    <false/>
+                    <true/>
                     <key>ExecutablePath</key>
                     <string>Contents/MacOS/SmallTreeIntel82576</string>
                     <key>MaxKernel</key>
-                    <string></string>
+                    <string>20.99.99</string>
                     <key>MinKernel</key>
                     <string></string>
                     <key>PlistPath</key>
@@ -653,36 +604,6 @@
                     <key>Skip</key>
                     <integer>0</integer>
                 </dict>
-                <dict>
-                    <key>Arch</key>
-                    <string>x86_64</string>
-                    <key>Base</key>
-                    <string></string>
-                    <key>Comment</key>
-                    <string>Patch for DP or HDMI audio detecting when using single display</string>
-                    <key>Count</key>
-                    <integer>0</integer>
-                    <key>Enabled</key>
-                    <false/>
-                    <key>Find</key>
-                    <data>DgAAuHCdAADrBpA=</data>
-                    <key>Identifier</key>
-                    <string>as.vit9696.AppleALC</string>
-                    <key>Limit</key>
-                    <integer>0</integer>
-                    <key>Mask</key>
-                    <data></data>
-                    <key>MaxKernel</key>
-                    <string></string>
-                    <key>MinKernel</key>
-                    <string></string>
-                    <key>Replace</key>
-                    <data>DgAAuEijAADrBpA=</data>
-                    <key>ReplaceMask</key>
-                    <data></data>
-                    <key>Skip</key>
-                    <integer>0</integer>
-                </dict>
             </array>
             <key>Quirks</key>
             <dict>
@@ -699,7 +620,7 @@
                 <key>CustomSMBIOSGuid</key>
                 <false/>
                 <key>DisableIoMapper</key>
-                <true/>
+                <false/>
                 <key>DisableLinkeditJettison</key>
                 <true/>
                 <key>DisableRtcChecksum</key>
@@ -707,7 +628,7 @@
                 <key>ExtendBTFeatureFlags</key>
                 <false/>
                 <key>ExternalDiskIcons</key>
-                <true/>
+                <false/>
                 <key>ForceAquantiaEthernet</key>
                 <false/>
                 <key>ForceSecureBootScheme</key>
@@ -719,9 +640,9 @@
                 <key>LegacyCommpage</key>
                 <false/>
                 <key>PanicNoKextDump</key>
-                <true/>
+                <false/>
                 <key>PowerTimeoutKernelPanic</key>
-                <true/>
+                <false/>
                 <key>ProvideCurrentCpuInfo</key>
                 <false/>
                 <key>SetApfsTrimTimeout</key>
@@ -753,6 +674,8 @@
                 <integer>0</integer>
                 <key>HibernateMode</key>
                 <string>None</string>
+                <key>HibernateSkipsPicker</key>
+                <true/>
                 <key>HideAuxiliary</key>
                 <true/>
                 <key>LauncherOption</key>
@@ -874,50 +797,6 @@
                     <key>Flavour</key>
                     <string>Auto</string>
                     <key>FullNvramAccess</key>
-                    <false/>
-                    <key>Name</key>
-                    <string>CsrUtil</string>
-                    <key>Path</key>
-                    <string>CsrUtil.efi</string>
-                    <key>RealPath</key>
-                    <false/>
-                    <key>TextMode</key>
-                    <false/>
-                </dict>
-                <dict>
-                    <key>Arguments</key>
-                    <string></string>
-                    <key>Auxiliary</key>
-                    <true/>
-                    <key>Comment</key>
-                    <string></string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Flavour</key>
-                    <string>Auto</string>
-                    <key>FullNvramAccess</key>
-                    <false/>
-                    <key>Name</key>
-                    <string>EFI Shell</string>
-                    <key>Path</key>
-                    <string>Shell.efi</string>
-                    <key>RealPath</key>
-                    <false/>
-                    <key>TextMode</key>
-                    <false/>
-                </dict>
-                <dict>
-                    <key>Arguments</key>
-                    <string></string>
-                    <key>Auxiliary</key>
-                    <true/>
-                    <key>Comment</key>
-                    <string></string>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Flavour</key>
-                    <string>Auto</string>
-                    <key>FullNvramAccess</key>
                     <true/>
                     <key>Name</key>
                     <string>Clean Nvram</string>
@@ -966,9 +845,9 @@
                 <key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
                 <dict>
                     <key>boot-args</key>
-                    <string>-v -brcmfxwowl brcmfx-country=HK</string>
+                    <string>-v brcmfx-country=HK</string>
                     <key>prev-lang:kbd</key>
-                    <string>zh-Hans:0</string>
+                    <string>zh-Hans:252</string>
                 </dict>
             </dict>
             <key>Delete</key>
@@ -1031,13 +910,13 @@
                 <key>AdviseFeatures</key>
                 <false/>
                 <key>MLB</key>
-                <string>C07152600GUKXPG1F</string>
+                <string>C071471084NKXPGAD</string>
                 <key>MaxBIOSVersion</key>
                 <false/>
                 <key>ProcessorType</key>
                 <integer>0</integer>
                 <key>ROM</key>
-                <data>ML8BIBEX</data>
+                <data>icRuPocX</data>
                 <key>SpoofVendor</key>
                 <false/>
                 <key>SystemMemoryStatus</key>
@@ -1045,9 +924,9 @@
                 <key>SystemProductName</key>
                 <string>Macmini8,1</string>
                 <key>SystemSerialNumber</key>
-                <string>C07GWBYHJYVX</string>
+                <string>C07GQ6ZNJYVX</string>
                 <key>SystemUUID</key>
-                <string>02D9CA0A-8099-4A37-8E68-AE4B3582930E</string>
+                <string>E8A2B854-3C52-47CC-90D2-45FB21B0DABB</string>
             </dict>
             <key>UpdateDataHub</key>
             <true/>
@@ -1089,6 +968,12 @@
                 <integer>0</integer>
                 <key>KeySubsequentDelay</key>
                 <integer>5</integer>
+                <key>PointerDwellClickTimeout</key>
+                <integer>0</integer>
+                <key>PointerDwellDoubleClickTimeout</key>
+                <integer>0</integer>
+                <key>PointerDwellRadius</key>
+                <integer>0</integer>
                 <key>PointerPollMask</key>
                 <integer>-1</integer>
                 <key>PointerPollMax</key>
