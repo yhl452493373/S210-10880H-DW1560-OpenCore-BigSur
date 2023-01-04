@@ -6,8 +6,9 @@
 
 # i211AT网卡在最新的Ventura、Monterey下目前免驱，因此删除了[AppleIGB](https://github.com/donatengit/AppleIGB)驱动，同时不再需要刷成210，直接i211即可（或者可以试试用efi中提供的i211网卡固件重刷一次）。
 
-基于opencore0.8.7正式版
+基于opencore0.8.8正式版
 
++ 2023.01.04 更新oc到0.8.8正式版，更新kext到最新
 + 2022.12.07 更新oc到0.8.7正式版，更新kext到最新
 + 2022.11.08 更新oc到0.8.6正式版，更新kext到最新
 + 2022.10.07 去除i211的AppleIGB驱动，在最新的Monterey、Ventrua下测试，为免驱
