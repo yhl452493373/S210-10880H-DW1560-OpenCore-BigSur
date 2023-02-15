@@ -2,6 +2,12 @@
 
 ## 目前来说，已经基本没啥可完善的地方了，因此以后的更新都是常规更新，即OpenCore和Kext更新
 
+# 注意：
++ **如果你在macOS 13 Ventrua中更新系统时，每次的都必须下载全量的更新包，可以试试将 Kexts 中的 BlueToolFixup.kext 临时禁用，然后重启在更新。**
++ **如果禁用 BlueToolFixup.kext 后重启，蓝牙能正常工作，那么可以把改kext从配置文件中删除**
++ **如果禁用 BlueToolFixup.kext 后重启，蓝牙能正常工作，那么可以试着将 BrcmFirmwareData.kext 以及 BrcmPatchRAM3.kext 禁用。如果禁用这两个kext后重启蓝牙仍然能正常工作，则可以直接将蓝牙相关的驱动完全移除。**
++ **如果禁用 BlueToolFixup.kext 后重启，蓝牙不能正常工作，那么在更新完成后，启用该kext**
+
 # 2021.12.16重要说明：今天查电源日志的时候，发现每隔两小时会唤醒一次，唤醒原因似乎为【唤醒以供以网络访问】和另一个RTC任务（不确定RTC任务是否就是因为开了唤醒以供网络访问出现的），因此需要在电源管理里面把“唤醒以供以太网访问”、断电后自动启动、启用电能小憩都关掉。
 
 # i211AT网卡在最新的Ventura、Monterey下目前免驱，因此删除了[AppleIGB](https://github.com/donatengit/AppleIGB)驱动，同时不再需要刷成210，直接i211即可（或者可以试试用efi中提供的i211网卡固件重刷一次）。
