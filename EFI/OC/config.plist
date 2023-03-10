@@ -807,28 +807,6 @@
 				<key>TextMode</key>
 				<false/>
 			</dict>
-			<dict>
-				<key>Arguments</key>
-				<string>Shutdown</string>
-				<key>Auxiliary</key>
-				<true/>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>Flavour</key>
-				<string>Auto</string>
-				<key>FullNvramAccess</key>
-				<false/>
-				<key>Name</key>
-				<string>Shutdown</string>
-				<key>Path</key>
-				<string>ResetSystem.efi</string>
-				<key>RealPath</key>
-				<false/>
-				<key>TextMode</key>
-				<false/>
-			</dict>
 		</array>
 	</dict>
 	<key>NVRAM</key>
@@ -1036,7 +1014,7 @@
 				<key>LoadEarly</key>
 				<false/>
 				<key>Path</key>
-				<string>OpenHfsPlus.efi</string>
+				<string>HfsPlus.efi</string>
 			</dict>
 			<dict>
 				<key>Arguments</key>
@@ -1049,6 +1027,30 @@
 				<false/>
 				<key>Path</key>
 				<string>OpenCanopy.efi</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>LoadEarly</key>
+				<false/>
+				<key>Path</key>
+				<string>ResetNvramEntry.efi</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>LoadEarly</key>
+				<false/>
+				<key>Path</key>
+				<string>ToggleSipEntry.efi</string>
 			</dict>
 		</array>
 		<key>Input</key>
