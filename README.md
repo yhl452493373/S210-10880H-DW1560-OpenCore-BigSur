@@ -3,6 +3,7 @@
 ## 目前来说，已经基本没啥可完善的地方了，因此以后的更新都是常规更新，即OpenCore和Kext更新
 
 # 注意：
++ **由于我的BCM94360Z4是完全免驱的，所以我没有启用AirportBrcmFixup和BrcmPatchRAM，你需要根据你的硬件来启用**
 + **如果你在macOS 13 Ventrua中更新系统时，每次的都必须下载全量的更新包，可以试试将 Kexts 中的 BlueToolFixup.kext 临时禁用，然后重启在更新。**
 + **如果禁用 BlueToolFixup.kext 后重启，蓝牙能正常工作，那么可以把改kext从配置文件中删除**
 + **如果禁用 BlueToolFixup.kext 后重启，蓝牙能正常工作，那么可以试着将 BrcmFirmwareData.kext 以及 BrcmPatchRAM3.kext 禁用。如果禁用这两个kext后重启蓝牙仍然能正常工作，则可以直接将蓝牙相关的驱动完全移除。**
