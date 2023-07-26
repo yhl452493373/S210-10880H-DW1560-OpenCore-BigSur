@@ -1,4 +1,4 @@
-# S210-10980HK(10880H)-DW1830-OpenCore-Monterey，支持Monterey、Ventura
+# S210-10980HK(10880H)-BCM94360Z4-OpenCore-Sonoma，支持Monterey、Ventura、Sonoma
 
 ## 目前来说，已经基本没啥可完善的地方了，因此以后的更新都是常规更新，即OpenCore和Kext更新
 
@@ -8,12 +8,26 @@
 + **如果禁用 BlueToolFixup.kext 后重启，蓝牙能正常工作，那么可以试着将 BrcmFirmwareData.kext 以及 BrcmPatchRAM3.kext 禁用。如果禁用这两个kext后重启蓝牙仍然能正常工作，则可以直接将蓝牙相关的驱动完全移除。**
 + **如果禁用 BlueToolFixup.kext 后重启，蓝牙不能正常工作，那么在更新完成后，启用该kext**
 
+# 关于Sonoma
++ **目前Sonoma处于测试阶段，因此存部分在软件兼容性问题**
++ **Sonoma本身去掉了以前没有问题的博通网卡的支持，只能用OCLP打补丁来恢复支持，但这么做有副作用：不能增量更新、每次更新后重新打补丁**
++ **为方便OCLP给Sonoma打补丁，默认关闭了SIP，禁用了Secure Boot Model**
++ **OCLP使用的软件`OpenCore-Patcher`可以下载Sonoma的安装包，下载会自动安装到系统的应用程序里面**
++ **`OpenCore-Patcher`目前是预览版，是自己编译的，下载地址：[OpenCore-Patcher](https://www.123pan.com/s/7sh5Vv-iHD3A.html)，提取码:`12zA`**
++ **Sonoma通过OCLP项目可以驱动博通网卡，但是存在限制：网卡的设备ID（Hackintool - PCIe - 设备）为`0x43BA`、`0x43A3`、`0x43A0`、`0x4331`、`0x4353`的才能驱动**
++ **OCLP驱动方法，请移步[使用OCLP在macOS Sonoma中驱动博通网卡](https://bbs.pcbeta.com/viewthread-1975133-1-1.html)，请仔细阅读**
++ **OCLP驱动后的网卡若速率不达标，请移步[解决sonoma下博通网卡OCLP补丁后仍然无法驱动以及驱动后速率低的问题，送给需要的人](https://bbs.pcbeta.com/viewthread-1975162-1-1.html)**
++ **由于本人硬件有限，仅在BCM943602CDP和BCM94306Z4两款网卡进行过测试**
+
 # 2021.12.16重要说明：今天查电源日志的时候，发现每隔两小时会唤醒一次，唤醒原因似乎为【唤醒以供以网络访问】和另一个RTC任务（不确定RTC任务是否就是因为开了唤醒以供网络访问出现的），因此需要在电源管理里面把“唤醒以供以太网访问”、断电后自动启动、启用电能小憩都关掉。
 
 # i211AT网卡在最新的Ventura、Monterey下目前免驱，因此删除了[AppleIGB](https://github.com/donatengit/AppleIGB)驱动，同时不再需要刷成210，直接i211即可（或者可以试试用efi中提供的i211网卡固件重刷一次）。
 
-基于opencore0.9.0正式版
+# 从macOS 12.3开始，[不需要SSDT-PLUG.aml](https://dortania.github.io/OpenCore-Post-Install/universal/pm.html#enabling-x86platformplugin)，因此本EFI`默认为禁用`状态。如果你系统版本低于12.3，请启用该ACPI补丁。
 
+基于opencore0.9.3正式版
+
++ 2023.07.26 更新oc到0.9.3正式版，更新kext到最新，支持安装Sonoma，通过OCLP驱动部分博通网卡
 + 2023.03.10 更新oc到0.9.0正式版，更新kext到最新
 + 2023.02.15 更新oc到0.8.9正式版，更新kext到最新
 + 2023.01.04 更新oc到0.8.8正式版，更新kext到最新
@@ -58,14 +72,14 @@
 机型S210，i9 10980hk，64G，4K显示器（mini dp）+4K显示（hdmi 2.0），声卡为alc235（老板说是alc 233，但声卡id0x10ec0235即实际alc 235）
 
 ### 2、工作情况
-以下均基于BigSur 11.4测试，Catalina没测试。如果要使用Catalina，建议用最新的10.15.7进行测试。（2021.08.19测试，Monterey可以正常安装使用。）
+以下均基于Ventrua测试
 
 ①、全部正常：
 DP、HDMI2.0（单DP、单HDMI、DP+HDMI）
 睡眠唤醒
 原生电源管理
-DW1830蓝牙
-DW1830无线网卡
+BCM94360Z4蓝牙免驱
+BCM94360Z4无线网卡免驱
 I219V（背面靠近双USB3.0的那个）
 I211AT（背面靠近电源接口的那个）
 USB（3.0、2.0、type-c）
