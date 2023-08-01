@@ -3,8 +3,8 @@
 ## 目前来说，已经基本没啥可完善的地方了，因此以后的更新都是常规更新，即OpenCore和Kext更新
 
 # 注意：
-+ **由于我的BCM94360Z4是完全免驱的，所以我没有启用AirportBrcmFixup和BrcmPatchRAM，你需要根据你的硬件来启用**
 + **如果你在macOS 13 Ventrua中更新系统时，每次的都必须下载全量的更新包，可以试试将 Kexts 中的 BlueToolFixup.kext 临时禁用，然后重启在更新。**
++ **由于我的BCM94360Z4是完全免驱的，所以我只启用AirportBrcmFixup来修改网卡地区，你需要根据你的硬件来启用BrcmPatchRAM**
 + **如果禁用 BlueToolFixup.kext 后重启，蓝牙能正常工作，那么可以把改kext从配置文件中删除**
 + **如果禁用 BlueToolFixup.kext 后重启，蓝牙能正常工作，那么可以试着将 BrcmFirmwareData.kext 以及 BrcmPatchRAM3.kext 禁用。如果禁用这两个kext后重启蓝牙仍然能正常工作，则可以直接将蓝牙相关的驱动完全移除。**
 + **如果禁用 BlueToolFixup.kext 后重启，蓝牙不能正常工作，那么在更新完成后，启用该kext**
@@ -14,11 +14,14 @@
 + **Sonoma本身去掉了以前没有问题的博通网卡的支持，只能用OCLP打补丁来恢复支持，但这么做有副作用：不能增量更新、每次更新后重新打补丁**
 + **为方便OCLP给Sonoma打补丁，默认关闭了SIP，禁用了Secure Boot Model**
 + **OCLP使用的软件`OpenCore-Patcher`可以下载Sonoma的安装包，下载会自动安装到系统的应用程序里面**
-+ **`OpenCore-Patcher`目前是预览版，是自己编译的，下载地址：[OpenCore-Patcher](https://www.123pan.com/s/7sh5Vv-iHD3A.html)，提取码:`12zA`**
++ **`OpenCore-Patcher`目前是预览版，是自己编译的，下载地址：[OpenCore-Patcher](https://www.123pan.com/s/7sh5Vv-mQD3A.html)，提取码:`tevB`，`如果提示更新，选择不更新`**
 + **Sonoma通过OCLP项目可以驱动博通网卡，但是存在限制：网卡的设备ID（Hackintool - PCIe - 设备）为`0x43BA`、`0x43A3`、`0x43A0`、`0x4331`、`0x4353`的才能驱动**
 + **OCLP驱动方法，请移步[使用OCLP在macOS Sonoma中驱动博通网卡](https://bbs.pcbeta.com/viewthread-1975133-1-1.html)，请仔细阅读**
 + **OCLP驱动后的网卡若速率不达标，请移步[解决sonoma下博通网卡OCLP补丁后仍然无法驱动以及驱动后速率低的问题，送给需要的人](https://bbs.pcbeta.com/viewthread-1975162-1-1.html)**
 + **由于本人硬件有限，仅在BCM943602CDP和BCM94306Z4两款网卡进行过测试**
+
+# Sonoma下OCLP打补丁来驱动博通网卡，我已经发现的问题
++ 状态栏WIFI图标点击WIFI名称无反应，只能通过 设置 -> WIFI 去连接
 
 # 2021.12.16重要说明：今天查电源日志的时候，发现每隔两小时会唤醒一次，唤醒原因似乎为【唤醒以供以网络访问】和另一个RTC任务（不确定RTC任务是否就是因为开了唤醒以供网络访问出现的），因此需要在电源管理里面把“唤醒以供以太网访问”、断电后自动启动、启用电能小憩都关掉。
 
@@ -28,6 +31,8 @@
 
 基于opencore0.9.3正式版
 
++ 2023.08.01 增加AMFIPass.kext，启动参数增加-amfipassbeta，移除amfi0=0x80，解决VMWare Fusion以及注入后的PD虚拟机无法使用问题
++ 2023.07.27 csr-active-config改为通过`ToggleSipEntry.efi`开关，关闭状态值改为`7F0A0000`，可以在`UEFI`-`Drivers`-`ToggleSipEntry.efi`的`Arguments`里面设置，目前是`0xA7F`，计算后就是`7F0A0000`
 + 2023.07.26 更新oc到0.9.3正式版，更新kext到最新，支持安装Sonoma，通过OCLP驱动部分博通网卡
 + 2023.03.10 更新oc到0.9.0正式版，更新kext到最新
 + 2023.02.15 更新oc到0.8.9正式版，更新kext到最新
