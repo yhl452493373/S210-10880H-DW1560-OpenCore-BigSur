@@ -14,7 +14,7 @@
 + **Sonoma本身去掉了以前没有问题的博通网卡的支持，只能用OCLP打补丁来恢复支持，但这么做有副作用：不能增量更新、每次更新后重新打补丁**
 + **为方便OCLP给Sonoma打补丁，默认关闭了SIP，禁用了Secure Boot Model**
 + **OCLP使用的软件`OpenCore-Patcher`可以下载Sonoma的安装包，下载会自动安装到系统的应用程序里面**
-+ **`OpenCore-Patcher`目前是预览版，是自己编译的，下载地址：[OpenCore-Patcher](https://www.123pan.com/s/7sh5Vv-mQD3A.html)，提取码:`tevB`，`如果提示更新，选择不更新`**
++ **`OpenCore-Patcher`目前是预览版，是自己编译的，下载地址：[OpenCore-Patcher](https://www.123pan.com/s/7sh5Vv-SQD3A.html)，提取码:`FoAr`，`如果提示更新，选择不更新`**
 + **Sonoma通过OCLP项目可以驱动博通网卡，但是存在限制：网卡的设备ID（Hackintool - PCIe - 设备）为`0x43BA`、`0x43A3`、`0x43A0`、`0x4331`、`0x4353`的才能驱动**
 + **OCLP驱动方法，请移步[使用OCLP在macOS Sonoma中驱动博通网卡](https://bbs.pcbeta.com/viewthread-1975133-1-1.html)，请仔细阅读**
 + **OCLP驱动后的网卡若速率不达标，请移步[解决sonoma下博通网卡OCLP补丁后仍然无法驱动以及驱动后速率低的问题，送给需要的人](https://bbs.pcbeta.com/viewthread-1975162-1-1.html)**
