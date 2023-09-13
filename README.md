@@ -16,7 +16,7 @@
 + **Sonoma通过OCLP项目可以驱动博通网卡，但是存在限制：OCLP项目组支持的网卡的设备ID（Hackintool - PCIe - 设备）为`0x43BA`、`0x43A3`、`0x43A0`、`0x4331`、`0x4353`的才能驱动**
 + **为方便OCLP给Sonoma打补丁，默认关闭了SIP，禁用了Secure Boot Model**
 + **OCLP使用的软件`OpenCore-Patcher`可以下载Sonoma的安装包，下载会自动安装到系统的应用程序里面**
-+ **`OpenCore-Patcher`目前是预览版，是自己编译的，下载地址：[OpenCore-Patcher](https://www.123pan.com/s/7sh5Vv-SQD3A.html)，提取码:`FoAr`，`如果提示更新，选择不更新`。本人编译时增加了`设备Id`为`0x43B1`、`0x43B2`、`0x4357`的网卡的补丁检测，如果你的网卡的设备Id为这三个，现在应该也会提示有网卡补丁需要安装。`0x43B1`的网卡（`DW1560`、`BCM94352HMB`、`BCM94352zae_3`这三款网卡测试了，会提示打网卡补丁，打补丁后网卡也正常使用）**
++ **`OpenCore-Patcher`目前是预览版，是自己编译的，下载地址：[OpenCore-Patcher](https://www.123pan.com/s/7sh5Vv-7BD3A.html)，提取码:`gjqG`，`如果提示更新，选择不更新`。本人编译时增加了`设备Id`为`0x43B1`、`0x43B2`、`0x4357`的网卡的补丁检测，如果你的网卡的设备Id为这三个，现在应该也会提示有网卡补丁需要安装。`0x43B1`的网卡（`DW1560`、`BCM94352HMB`、`BCM94352zae_3`这三款网卡测试了，会提示打网卡补丁，打补丁后网卡也正常使用）**
 + **OCLP驱动方法，请移步[使用OCLP在macOS Sonoma中驱动博通网卡](https://bbs.pcbeta.com/viewthread-1975133-1-1.html)，请仔细阅读**
 + **OCLP驱动后的网卡若速率不达标，请移步[解决sonoma下博通网卡OCLP补丁后仍然无法驱动以及驱动后速率低的问题，送给需要的人](https://bbs.pcbeta.com/viewthread-1975162-1-1.html)**
 + **由于本人硬件有限，仅在BCM943602CDP和BCM94306Z4两款网卡进行过测试**
@@ -32,6 +32,7 @@
 
 基于opencore0.9.3正式版
 
++ 2023.09.13 更新oc到0.9.5正式版，更新kext到最新
 + 2023.08.08 更新oc到0.9.4正式版，更新kext到最新
 + 2023.08.01 增加AMFIPass.kext，启动参数增加-amfipassbeta，移除amfi0=0x80，解决VMWare Fusion以及注入后的PD虚拟机无法使用问题
 + 2023.07.27 csr-active-config改为通过`ToggleSipEntry.efi`开关，关闭状态值改为`7F0A0000`，可以在`UEFI`-`Drivers`-`ToggleSipEntry.efi`的`Arguments`里面设置，目前是`0xA7F`，计算后就是`7F0A0000`
