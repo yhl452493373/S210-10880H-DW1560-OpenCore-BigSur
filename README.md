@@ -25,8 +25,11 @@
 
 # 从macOS 12.3开始，[不需要SSDT-PLUG.aml](https://dortania.github.io/OpenCore-Post-Install/universal/pm.html#enabling-x86platformplugin)，因此本EFI`默认为禁用`状态。如果你系统版本低于12.3，请启用该ACPI补丁。
 
+# DUANG的音效是否播放，取决于NVRAM中的`StartupMute`是否为`00`。这个值由`系统设置`-`声音`-`启动时播放声音`决定。如该选项开启，则启动时播放DUANG的声音，关闭则不播放。如果要强制播放，则把config.plist中的`UEFI`-`PlayChime`改为`Enable`。DUANG的音效只能由3.5mm耳机孔输入，hdmi或dp无法输出。
+
 基于opencore0.9.5正式版
 
++ 2023.10.09 声卡id由11改为37，解决插入耳机后微信等软件声音小问题；增加进入OC选择界面时的DUANG的音效（DUANG的音效只能由3.5mm耳机孔输入，hdmi或dp无法输出）
 + 2023.10.07 更新AirportBrcpFixup、RestrictEvents到最新
 + 2023.09.13 更新oc到0.9.5正式版，更新kext到最新
 + 2023.08.08 更新oc到0.9.4正式版，更新kext到最新
