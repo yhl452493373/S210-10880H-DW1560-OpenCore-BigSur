@@ -19,13 +19,13 @@
 + **OCLP驱动方法，请移步[使用OCLP在macOS Sonoma中驱动博通网卡](https://bbs.pcbeta.com/viewthread-1975133-1-1.html)，请仔细阅读**
 + **OCLP驱动后的网卡若速率不达标，请移步[解决sonoma下博通网卡OCLP补丁后仍然无法驱动以及驱动后速率低的问题，送给需要的人](https://bbs.pcbeta.com/viewthread-1975162-1-1.html)**
 
+# 2023.10.09说明：DUANG的音效是否播放，取决于NVRAM中的`StartupMute`是否为`00`。这个值由`系统设置`-`声音`-`启动时播放声音`决定。如该选项开启，则启动时播放DUANG的声音，关闭则不播放。如果要强制播放，则把config.plist中的`UEFI`-`PlayChime`改为`Enable`。DUANG的音效只能由3.5mm耳机孔输出，hdmi或dp无法输出。
+
 # 2021.12.16重要说明：今天查电源日志的时候，发现每隔两小时会唤醒一次，唤醒原因似乎为【唤醒以供以网络访问】和另一个RTC任务（不确定RTC任务是否就是因为开了唤醒以供网络访问出现的），因此需要在电源管理里面把“唤醒以供以太网访问”、断电后自动启动、启用电能小憩都关掉。
 
 # i211AT网卡在最新的Ventura、Monterey下目前免驱，因此删除了[AppleIGB](https://github.com/donatengit/AppleIGB)驱动，同时不再需要刷成210，直接i211即可（或者可以试试用efi中提供的i211网卡固件重刷一次）。
 
 # 从macOS 12.3开始，[不需要SSDT-PLUG.aml](https://dortania.github.io/OpenCore-Post-Install/universal/pm.html#enabling-x86platformplugin)，因此本EFI`默认为禁用`状态。如果你系统版本低于12.3，请启用该ACPI补丁。
-
-# DUANG的音效是否播放，取决于NVRAM中的`StartupMute`是否为`00`。这个值由`系统设置`-`声音`-`启动时播放声音`决定。如该选项开启，则启动时播放DUANG的声音，关闭则不播放。如果要强制播放，则把config.plist中的`UEFI`-`PlayChime`改为`Enable`。DUANG的音效只能由3.5mm耳机孔输入，hdmi或dp无法输出。
 
 基于opencore0.9.5正式版
 
