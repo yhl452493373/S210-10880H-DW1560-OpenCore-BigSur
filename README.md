@@ -27,8 +27,9 @@
 
 # 从macOS 12.3开始，[不需要SSDT-PLUG.aml](https://dortania.github.io/OpenCore-Post-Install/universal/pm.html#enabling-x86platformplugin)，因此本EFI`默认为禁用`状态。如果你系统版本低于12.3，请启用该ACPI补丁。
 
-基于opencore0.9.5正式版
+基于opencore0.9.7正式版
 
++ 2023.12.25 使用`AppleIGB.kext`修复i211网卡在macOS Monterey下无法使用的问题
 + 2023.10.09 声卡id由11改为37，解决插入耳机后微信等软件声音小问题；增加进入OC选择界面时的DUANG的音效（DUANG的音效只能由3.5mm耳机孔输入，hdmi或dp无法输出）
 + 2023.10.07 更新AirportBrcpFixup、RestrictEvents到最新
 + 2023.09.13 更新oc到0.9.5正式版，更新kext到最新

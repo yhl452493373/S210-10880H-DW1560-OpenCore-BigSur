@@ -1047,7 +1047,7 @@
                 <key>AdviseFeatures</key>
                 <false/>
                 <key>MLB</key>
-                <string>C07106303J9KXPG1M</string>
+                <string>C07303300J9KXPGUE</string>
                 <key>MaxBIOSVersion</key>
                 <false/>
                 <key>ProcessorType</key>
@@ -1061,9 +1061,9 @@
                 <key>SystemProductName</key>
                 <string>Macmini8,1</string>
                 <key>SystemSerialNumber</key>
-                <string>C07F70YMJYVX</string>
+                <string>C07K401KJYVX</string>
                 <key>SystemUUID</key>
-                <string>C0D3DC2D-E740-4B14-879A-8E757A48FCA5</string>
+                <string>B244CD69-1B4C-4BDC-A5A0-B80C09046812</string>
             </dict>
             <key>UpdateDataHub</key>
             <true/>
